@@ -48,10 +48,10 @@ export default function Navbar() {
           {/* BRAND */}
           <Link to="/" className="flex flex-col leading-none">
             <span className="text-2xl md:text-3xl font-semibold tracking-tight text-white">
-              CodeCraft <span className="text-blue-500">Institute</span>
+              CodeMint <span className="text-blue-500">Institute</span>
             </span>
 
-            <span className="text-base text-slate-500 tracking-wide mt-1">
+            <span className="text-base text-slate-500 tracking-wide ">
               Software Training & Development
             </span>
           </Link>

@@ -98,21 +98,25 @@ export default function Courses() {
   return (
     <div className="bg-[#02040a] text-white min-h-screen font-sans pb-24 selection:bg-blue-600/30">
       {/* --- HERO SECTION --- */}
-      <section className="relative pt-32 pb-12 px-6 overflow-hidden text-center">
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden text-center">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[140px] rounded-full -z-10" />
 
-        <div className="space-y-3 mb-10">
-          <span className="text-blue-500 font-mono tracking-[0.4em] text-[10px] sm:text-xs uppercase animate-pulse">
+        <div className="max-w-4xl mx-auto">
+          {/* Small Label */}
+          <p className="text-blue-500 text-sm font-semibold tracking-widest">
             Industrial Training Programs
-          </span>
+          </p>
 
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-white uppercase tracking-tight leading-[1.05]">
-            Learning <br /> Playbook Guide
+          {/* Main Heading */}
+          <h1 className="mt-6 text-4xl sm:text-6xl md:text-7xl font-extrabold text-white leading-[1.1] tracking-tight">
+            Our Learning Path
           </h1>
 
-          <p className="text-slate-500 w-full md:max-w-xl mx-auto font-mono text-[11px] sm:text-xs leading-relaxed uppercase tracking-tight">
-            // CodeCraft Institute · Practical Software Training & Real Project
-            Development
+          {/* Description */}
+          <p className="mt-8 text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+            Structured programs designed to build strong fundamentals, practical
+            skills, and real project experience required in the software
+            industry.
           </p>
         </div>
       </section>

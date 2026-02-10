@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="lg:col-span-5 space-y-6">
             <div className="flex flex-col leading-none">
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">
-                CodeCraft <span className="text-blue-500">Institute</span>
+                CodeMint <span className="text-blue-500">Institute</span>
               </h2>
               <span className="text-sm text-slate-500 tracking-wide mt-2">
                 Software Training & Development
@@ -86,7 +86,7 @@ export default function Footer() {
         {/* BOTTOM STRIP */}
         <div className="pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
           <p className="text-slate-600">
-            © {currentYear} CodeCraft Institute. All rights reserved.
+            © {currentYear} CodeMint Institute. All rights reserved.
           </p>
 
           <div className="flex gap-6">

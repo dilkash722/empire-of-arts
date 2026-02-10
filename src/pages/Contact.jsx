@@ -23,27 +23,20 @@ export default function ContactPage() {
   return (
     <div className="bg-[#02040a] text-white min-h-screen font-sans selection:bg-blue-600/30 overflow-x-hidden">
       {/* --- HERO SECTION: EXACT COURSE STYLE --- */}
-      <section className="relative pt-32 pb-12 px-6 overflow-hidden text-center">
-        {/* Glow Background */}
+      <section className="relative pt-32 pb-20 px-6 text-center overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[140px] rounded-full -z-10" />
 
-        <div className="space-y-3 mb-10">
-          {/* Mono Label */}
-          <span className="text-blue-500 font-mono tracking-[0.4em] text-[10px] sm:text-xs uppercase">
-            Contact Interface
-          </span>
+        <div className="max-w-3xl mx-auto">
+          <p className="text-blue-500 text-sm font-semibold tracking-widest">
+            Get in Touch
+          </p>
 
-          {/* Main Heading */}
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-white uppercase tracking-tight leading-[1.05]">
-            Connect <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-600 to-indigo-600">
-              CodeCraft Network
-            </span>
+          <h1 className="mt-6 text-4xl sm:text-6xl font-extrabold text-white leading-tight">
+            Contact CodeMint Institute
           </h1>
 
-          {/* Paragraph Line */}
-          <p className="text-slate-500 w-full md:max-w-xl mx-auto font-mono text-[11px] sm:text-xs leading-relaxed uppercase tracking-tight">
-            // CodeCraft Institute · Software Training & Development
+          <p className="mt-6 text-slate-400 text-base sm:text-lg leading-relaxed">
+            Reach out for course details, admissions, and training guidance.
           </p>
         </div>
       </section>

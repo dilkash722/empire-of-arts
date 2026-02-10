@@ -30,24 +30,28 @@ const AboutPage = () => {
         }}
       />
       {/* --- HERO SECTION --- */}
-      <section className="relative pt-32 pb-12 px-6 overflow-hidden text-center">
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden text-center">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[140px] rounded-full -z-10" />
 
-        <div className="space-y-3 mb-10">
-          <span className="text-blue-500 font-mono tracking-[0.4em] text-[10px] sm:text-xs uppercase">
+        <div className="max-w-4xl mx-auto">
+          {/* Small Label */}
+          <p className="text-blue-500 text-sm font-semibold tracking-widest">
             Industrial Training Programs
-          </span>
+          </p>
 
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-white uppercase tracking-tight leading-[1.05]">
-            Beyond <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-600 to-indigo-600">
+          {/* Main Heading */}
+          <h1 className="mt-6 text-4xl sm:text-6xl md:text-7xl font-extrabold text-white leading-[1.1] tracking-tight">
+            Beyond{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-600">
               Coding Bootcamps
             </span>
           </h1>
 
-          <p className="text-slate-500 w-full md:max-w-xl mx-auto font-mono text-[11px] sm:text-xs leading-relaxed uppercase tracking-tight">
-            // We train students to think like real developers through live
-            practice, clear concepts, and hands on project work.
+          {/* Description */}
+          <p className="mt-8 text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+            We train students to think like real developers through live
+            practice, clear concepts, and hands-on project work that reflects
+            real industry workflows.
           </p>
         </div>
       </section>
@@ -79,7 +83,7 @@ const AboutPage = () => {
               {/* Name & Title Container */}
               <div className="absolute bottom-10 left-10 space-y-1 z-10">
                 <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
-                  Md Dilkash
+                  Md Dilkhush
                 </h2>
                 <p className="text-blue-500 font-semibold tracking-widest text-xs uppercase">
                   Founder & Lead Architect
@@ -100,9 +104,9 @@ const AboutPage = () => {
               </h3>
               <p className="text-slate-400 text-lg md:text-xl leading-relaxed max-w-3xl">
                 "I founded{" "}
-                <span className="text-white">Galaxy Software Institute</span> to
-                bridge the gap between local talent and global standards. As an
-                MCA professional, my goal is to provide a structured, industrial
+                <span className="text-white">CodeMint Institute</span> to bridge
+                the gap between local talent and global standards. As an MCA
+                professional, my goal is to provide a structured, industrial
                 approach to software engineering."
               </p>
             </motion.div>
@@ -110,7 +114,7 @@ const AboutPage = () => {
             {/* STATS GRID */}
             <div className="grid grid-cols-2 gap-8 pt-4 border-t border-white/5">
               <div className="space-y-1">
-                <div className="text-blue-500 text-2xl md:text-3xl font-bold tracking-tight uppercase">
+                <div className="text-blue-500 text-2xl md:text-3xl font-bold tracking-tight">
                   MCA, BCA
                 </div>
                 <div className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]">
@@ -118,24 +122,24 @@ const AboutPage = () => {
                 </div>
               </div>
               <div className="space-y-1">
-                <div className="text-blue-500 text-2xl md:text-3xl font-bold tracking-tight uppercase">
-                  EXPERIENCE
+                <div className="text-blue-500 text-2xl md:text-3xl font-bold tracking-tight">
+                  Experience
                 </div>
                 <div className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]">
                   Real World Projects
                 </div>
               </div>
               <div className="space-y-1">
-                <div className="text-blue-500 text-2xl md:text-3xl font-bold tracking-tight uppercase">
-                  EXPERT
+                <div className="text-blue-500 text-2xl md:text-3xl font-bold tracking-tight">
+                  Expert
                 </div>
                 <div className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]">
                   Full Stack AI Systems
                 </div>
               </div>
               <div className="space-y-1">
-                <div className="text-blue-500 text-2xl md:text-3xl font-bold tracking-tight uppercase">
-                  INDUSTRIAL
+                <div className="text-blue-500 text-2xl md:text-3xl font-bold tracking-tight">
+                  Industrial
                 </div>
                 <div className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]">
                   Workflow Training
@@ -203,7 +207,7 @@ const AboutPage = () => {
       {/* --- PILLARS --- */}
       <section className="py-24 px-6 max-w-7xl mx-auto text-center">
         <h2 className="text-4xl md:text-6xl font-bold mb-16 tracking-tight text-white">
-          Institute Pillars
+          CodeMint Pillars
         </h2>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {[

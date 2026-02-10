@@ -13,7 +13,7 @@ import {
   BrainCircuit,
   ArrowRight,
   MonitorPlay,
-  PenTool,
+  Presentation,
   GitBranch,
   Zap,
   Binary,
@@ -68,7 +68,7 @@ const HomePage = () => {
             className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs md:text-sm font-medium tracking-[0.25em] uppercase mx-auto"
           >
             <Binary size={14} />
-            CodeCraft Institute
+            CodeMint Institute
             <span className="text-slate-500">// Katihar</span>
           </motion.div>
 
@@ -77,9 +77,9 @@ const HomePage = () => {
             variants={itemVariants}
             className="text-4xl sm:text-6xl md:text-8xl font-extrabold leading-tight tracking-tight text-white whitespace-nowrap"
           >
-            CODECRAFT{" "}
+            CodeMint{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-600">
-              INSTITUTE
+              Institute
             </span>
           </motion.h1>
 
@@ -133,11 +133,11 @@ const HomePage = () => {
         {/* Heading */}
         <div className="space-y-6 mb-10">
           <span className="text-blue-500 font-mono tracking-[0.5em] text-xs uppercase animate-pulse">
-            Execution Pipeline
+            Practical Learning System
           </span>
 
-          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-white uppercase tracking-tight leading-[1.05]">
-            BEYOND <br /> COACHING
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-white tracking-tight leading-[1.05]">
+            Beyond <br /> Coaching
           </h2>
         </div>
 
@@ -153,7 +153,7 @@ const HomePage = () => {
                 <MonitorPlay size={30} />
               </div>
 
-              <h3 className="text-2xl md:text-4xl font-bold text-white leading-snug uppercase tracking-tight">
+              <h3 className="text-2xl md:text-4xl font-bold text-white leading-snug tracking-tight">
                 Live Coding
               </h3>
 
@@ -174,7 +174,7 @@ const HomePage = () => {
                 <BrainCircuit size={28} />
               </div>
 
-              <h3 className="text-xl md:text-2xl font-bold text-white leading-snug uppercase tracking-tight">
+              <h3 className="text-xl md:text-2xl font-bold text-white leading-snug tracking-tight">
                 AI Assisted Learning
               </h3>
 
@@ -195,7 +195,7 @@ const HomePage = () => {
                 <Laptop size={28} />
               </div>
 
-              <h3 className="text-xl md:text-2xl font-bold text-white leading-snug uppercase tracking-tight">
+              <h3 className="text-xl md:text-2xl font-bold text-white leading-snug tracking-tight">
                 Bring Your Laptop
               </h3>
 
@@ -212,7 +212,7 @@ const HomePage = () => {
             className="md:col-span-8 relative bg-blue-600 p-8 md:p-12 rounded-[3.5rem] text-white overflow-hidden group shadow-[0_30px_60px_-15px_rgba(37,99,235,0.4)]"
           >
             <div className="absolute -right-10 top-1/2 -translate-y-1/2 text-[120px] md:text-[180px] font-black opacity-10 tracking-tighter select-none pointer-events-none group-hover:translate-x-6 transition-transform duration-700">
-              CodeCraft
+              CodeMint
             </div>
 
             <div className="relative z-10 space-y-6">
@@ -220,7 +220,7 @@ const HomePage = () => {
                 <Workflow size={30} />
               </div>
 
-              <h3 className="text-3xl md:text-5xl font-extrabold leading-tight uppercase tracking-tight">
+              <h3 className="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight">
                 Real Workflow
               </h3>
 
@@ -238,10 +238,10 @@ const HomePage = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-8">
           <div className="space-y-3">
             <span className="text-blue-500 font-mono tracking-[0.4em] text-[10px] sm:text-xs uppercase animate-pulse">
-              Execution Pipeline
+              Practice System
             </span>
 
-            <h2 className="text-3xl sm:text-5xl md:text-7xl font-black text-white uppercase tracking-tight leading-[1.05]">
+            <h2 className="text-3xl sm:text-5xl md:text-7xl font-black text-white tracking-tight leading-[1.05]">
               Daily <br /> Workflow
             </h2>
           </div>
@@ -258,7 +258,7 @@ const HomePage = () => {
           {[
             {
               id: "01",
-              icon: <PenTool size={28} />,
+              icon: <Presentation size={28} />,
               title: "Whiteboard",
               desc: "Basic concepts and logic are explained on the board with simple examples.",
               gradient: "from-blue-600/20",
@@ -310,7 +310,7 @@ const HomePage = () => {
                         Phase_{step.id}
                       </span>
                     </div>
-                    <h3 className="text-2xl font-black text-white uppercase tracking-tight">
+                    <h3 className="text-2xl font-black text-white tracking-tight">
                       {step.title}
                     </h3>
                     <p className="text-slate-400 text-sm leading-relaxed font-medium group-hover:text-slate-300 transition-colors">
@@ -332,29 +332,37 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* --- 5) VISIT CODECRAFT INSTITUTE --- */}
+      {/* --- 5) VISIT CodeMint INSTITUTE --- */}
       <section className="relative z-10 py-16 px-4 sm:px-6 text-center">
-        <div className="w-full max-w-7xl mx-auto bg-blue-600 rounded-[2.5rem] md:rounded-[3rem] px-6 sm:px-10 md:px-20 py-12 md:py-20 shadow-[0_40px_100px_-20px_rgba(37,99,235,0.4)]">
-          <h2 className="text-3xl sm:text-5xl md:text-7xl font-extrabold text-white uppercase tracking-tight leading-[1.1] mb-6">
-            Visit CodeCraft <br className="hidden sm:block" />
-            Training Center
-          </h2>
+        <div className="relative group overflow-hidden w-full max-w-6xl mx-auto bg-blue-600 rounded-[2.5rem] md:rounded-[3rem] px-6 sm:px-10 md:px-20 py-12 md:py-20 shadow-[0_40px_100px_-20px_rgba(37,99,235,0.4)]">
+          {/* Background CodeMint Text */}
+          <div className="absolute -right-10 top-1/2 -translate-y-1/2 mr-15 text-[120px] md:text-[210px] font-black opacity-16 tracking-tighter select-none pointer-events-none group-hover:translate-x-6 transition-transform duration-700">
+            CodeMint
+          </div>
 
-          <p className="text-blue-100 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-10 font-medium">
-            See how real software training happens. Visit our center, watch live
-            coding sessions, interact with the mentor, and understand the
-            complete learning environment before joining.
-          </p>
+          {/* Content */}
+          <div className="relative z-10">
+            <h2 className="text-3xl sm:text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-6">
+              Visit CodeMint <br className="hidden sm:block" />
+              Training Center
+            </h2>
 
-          <a
-            href="YOUR_GOOGLE_MAP_LINK"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-black hover:text-white h-14 md:h-16 px-10 md:px-14 rounded-2xl font-bold text-sm md:text-lg uppercase tracking-[0.2em] transition-all shadow-xl"
-          >
-            Visit Now
-            <ArrowRight size={18} className="ml-3" />
-          </a>
+            <p className="text-blue-100 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-10 font-medium">
+              See how real software training happens. Visit our center, watch
+              live coding sessions, interact with the mentor, and understand the
+              complete learning environment before joining.
+            </p>
+
+            <a
+              href="YOUR_GOOGLE_MAP_LINK"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-black hover:text-white h-14 md:h-16 px-10 md:px-14 rounded-2xl font-bold text-sm md:text-lg uppercase tracking-[0.2em] transition-all shadow-xl"
+            >
+              Visit Now
+              <ArrowRight size={18} className="ml-3" />
+            </a>
+          </div>
         </div>
       </section>
     </div>
