@@ -2,178 +2,131 @@ import { Link } from "react-router-dom";
 import {
   MapPin,
   Phone,
-  Mail,
-  Cpu,
   Instagram,
   Linkedin,
   Youtube,
-  Code2,
-  Terminal,
-  Layers,
-  BarChart3,
-  ArrowUpRight,
+  Send,
 } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const courses = [
-    {
-      name: "Web Designing",
-      icon: <Layers size={14} />,
-      path: "/web-designing",
-    },
-    {
-      name: "Frontend Development",
-      icon: <Code2 size={14} />,
-      path: "/frontend-dev",
-    },
-    {
-      name: "Full Stack Development",
-      icon: <Terminal size={14} />,
-      path: "/full-stack",
-    },
-    {
-      name: "Data Analytics with Python",
-      icon: <BarChart3 size={14} />,
-      path: "/data-analytics",
-    },
-  ];
-
   return (
-    <footer className="relative bg-[#030508] border-t border-white/5 pt-20 pb-10 overflow-hidden">
-      {/* Dynamic Tech Background */}
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-500/5 blur-[120px] rounded-full" />
-      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-indigo-500/5 blur-[100px] rounded-full" />
+    <footer className="bg-[#02040a] border-t border-white/5 pt-20 pb-10 font-sans relative overflow-hidden">
+      {/* Background Micro-Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
-          {/* Section 1: The Brand & Vision */}
+          {/* Section 1: Minimal Brand */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-tr from-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/20">
-                <Cpu className="text-white" size={24} />
-              </div>
-              <div>
-                <h2 className="text-white font-black text-2xl tracking-tighter leading-none">
-                  GALAXY <span className="text-blue-500">SOFTWARE</span>
-                </h2>
-                <p className="text-slate-500 text-[10px] font-bold tracking-[0.3em] uppercase mt-1">
-                  Training & Development Hub
-                </p>
-              </div>
+            <div className="flex items-center gap-3 group cursor-pointer">
+              {/* Chip Icon removed, keeping only the Text Brand */}
+              <h2 className="text-white font-black text-xl tracking-tighter uppercase">
+                GALAXY{" "}
+                <span className="text-blue-600 text-opacity-80">SOFTWARE</span>
+              </h2>
             </div>
 
-            <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
-              Bihar's emerging powerhouse for software excellence. We don't just
-              teach code; we build production-ready engineers and scalable
-              software solutions.
+            <p className="text-slate-500 text-sm leading-relaxed max-w-sm font-medium opacity-80">
+              Transforming Katihar into a software engineering hub. Architecting
+              production-ready careers through real-world builds.
             </p>
 
             <div className="flex gap-4">
-              {[<Instagram />, <Linkedin />, <Youtube />].map((icon, idx) => (
+              {[Instagram, Linkedin, Youtube].map((Icon, idx) => (
                 <a
                   key={idx}
                   href="#"
-                  className="p-2.5 rounded-lg border border-white/10 bg-white/5 text-slate-400 hover:text-white hover:bg-blue-600 transition-all duration-300"
+                  className="text-slate-600 hover:text-blue-500 transition-colors duration-300"
                 >
-                  {icon}
+                  <Icon size={18} strokeWidth={2.5} />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Section 2: Specialized Training */}
-          <div className="lg:col-span-3">
-            <h3 className="text-white font-bold text-[11px] uppercase tracking-[0.2em] mb-8 opacity-50">
-              Professional Training
-            </h3>
-            <ul className="space-y-4">
-              {courses.map((course) => (
-                <li key={course.name}>
+          {/* Section 2: Clean Links */}
+          <div className="lg:col-span-3 lg:pl-10">
+            <span className="text-[10px] font-black text-slate-700 uppercase tracking-[0.4em] mb-6 block">
+              // Academy
+            </span>
+            <ul className="space-y-3">
+              {[
+                "Full Stack",
+                "Frontend",
+                "Data Analytics",
+                "UI/UX with AI",
+              ].map((item) => (
+                <li key={item}>
                   <Link
-                    to={course.path}
-                    className="group flex items-center gap-3 text-slate-400 hover:text-blue-400 transition-colors"
+                    to="#"
+                    className="text-slate-500 hover:text-white text-xs font-bold uppercase tracking-widest transition-all hover:translate-x-1 inline-block"
                   >
-                    <span className="p-1.5 rounded bg-white/5 border border-white/10 group-hover:border-blue-500/50">
-                      {course.icon}
-                    </span>
-                    <span className="text-sm font-medium">{course.name}</span>
+                    {item}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Section 3: Development Center */}
+          {/* Section 3: Dev Lab */}
           <div className="lg:col-span-2">
-            <h3 className="text-white font-bold text-[11px] uppercase tracking-[0.2em] mb-8 opacity-50">
-              Development
-            </h3>
-            <ul className="space-y-4 text-sm font-medium text-slate-400">
-              <li className="hover:text-white cursor-pointer transition-colors">
-                Custom Software
-              </li>
-              <li className="hover:text-white cursor-pointer transition-colors">
-                Mobile Apps
-              </li>
-              <li className="hover:text-white cursor-pointer transition-colors">
-                API Integration
-              </li>
-              <li className="hover:text-white cursor-pointer transition-colors">
-                Cloud Solutions
-              </li>
+            <span className="text-[10px] font-black text-slate-700 uppercase tracking-[0.4em] mb-6 block">
+              // Studio
+            </span>
+            <ul className="space-y-3">
+              {["SaaS Build", "Mobile Apps", "Cloud Ops"].map((item) => (
+                <li
+                  key={item}
+                  className="text-slate-500 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors cursor-pointer"
+                >
+                  {item}
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Section 4: Contact & Support */}
+          {/* Section 4: Compact Action */}
           <div className="lg:col-span-3">
-            <div className="bg-gradient-to-br from-white/5 to-transparent p-6 rounded-3xl border border-white/10 relative overflow-hidden">
-              <div className="relative z-10">
-                <h4 className="text-white font-bold mb-4 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-                  Now Enrolling
-                </h4>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center gap-3 text-slate-400">
-                    <Phone size={14} className="text-blue-500" />
-                    <span className="text-xs font-bold">+91 87098 89091</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-slate-400">
-                    <MapPin size={14} className="text-blue-500" />
-                    <span className="text-xs">Katihar, Bihar</span>
-                  </div>
+            <div className="p-6 rounded-[2rem] bg-white/[0.02] border border-white/5 space-y-5">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-slate-300">
+                  <Phone size={14} className="text-blue-600" />
+                  <span className="text-xs font-black tracking-tight">
+                    +91 7763937638
+                  </span>
                 </div>
-                <button className="w-full py-3 bg-blue-600 hover:bg-white hover:text-black text-black font-black text-[10px] uppercase tracking-widest rounded-xl transition-all flex items-center justify-center gap-2 group">
-                  Contact Us{" "}
-                  <ArrowUpRight
-                    size={14}
-                    className="group-hover:rotate-45 transition-transform"
-                  />
-                </button>
+                <div className="flex items-center gap-2 text-slate-300">
+                  <MapPin size={14} className="text-blue-600" />
+                  <span className="text-xs font-black uppercase tracking-tighter">
+                    Katihar, Bihar
+                  </span>
+                </div>
               </div>
+
+              <button className="w-full h-12 bg-blue-600 text-white font-black text-[10px] uppercase tracking-[0.2em] rounded-xl hover:bg-white hover:text-black transition-all duration-500 flex items-center justify-center gap-2 shadow-lg shadow-blue-900/20">
+                Contact Now <Send size={12} />
+              </button>
             </div>
           </div>
         </div>
 
-        {/* Final Footer Bar */}
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[10px] font-bold text-slate-600 uppercase tracking-[0.2em]">
-            © {currentYear} Galaxy Software Institute & Dev Lab
+        {/* Minimal Legal Strip */}
+        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
+          <p className="text-[9px] font-bold text-slate-700 uppercase tracking-[0.3em]">
+            © {currentYear} Galaxy Software // Bihar's Premier Dev Lab
           </p>
           <div className="flex gap-6">
-            <a
-              href="#"
-              className="text-[10px] font-bold text-slate-600 hover:text-blue-500 uppercase tracking-widest transition-colors"
-            >
-              Privacy
-            </a>
-            <a
-              href="#"
-              className="text-[10px] font-bold text-slate-600 hover:text-blue-500 uppercase tracking-widest transition-colors"
-            >
-              Terms
-            </a>
+            {["Privacy", "Terms"].map((item) => (
+              <a
+                key={item}
+                href="#"
+                className="text-[9px] font-bold text-slate-800 hover:text-blue-500 uppercase tracking-[0.3em] transition-colors"
+              >
+                {item}
+              </a>
+            ))}
           </div>
         </div>
       </div>

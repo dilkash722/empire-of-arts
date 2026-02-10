@@ -1,182 +1,254 @@
-import { Button } from "@/components/ui/button";
+import React from "react";
+import { motion } from "framer-motion";
 import {
-  CheckCircle2,
-  Sparkles,
+  Target,
+  Eye,
   Terminal,
   Code2,
-  BrainCircuit,
-  ArrowUpRight,
-  Zap,
-  Globe,
+  BookOpen,
+  UserCheck,
+  ClipboardCheck,
   Cpu,
-  MousePointer2,
 } from "lucide-react";
 
-const courses = [
-  {
-    title: "Web Designing",
-    subtitle: "UI/UX Architecture",
-    desc: "Mastering Figma-to-Code workflows and modern CSS-in-JS patterns.",
-    tags: ["Figma", "Tailwind", "Gen-UI"],
-    icon: <Zap size={28} />,
-    color: "text-cyan-500",
-    border: "group-hover:border-cyan-500/40",
-  },
-  {
-    title: "Frontend Dev",
-    subtitle: "Next.js 15 Ecosystem",
-    desc: "Building high-performance React apps with Server Components.",
-    tags: ["React", "Next.js", "TS"],
-    icon: <Code2 size={28} />,
-    color: "text-blue-500",
-    border: "group-hover:border-blue-500/40",
-  },
-  {
-    title: "Full Stack Dev",
-    subtitle: "MERN + Gen-AI",
-    desc: "End-to-end engineering with AI agent integration and cloud scale.",
-    tags: ["Node", "Mongo", "LLMs"],
-    icon: <Terminal size={28} />,
-    color: "text-indigo-500",
-    border: "group-hover:border-indigo-500/40",
-  },
-  {
-    title: "Data Analytics",
-    subtitle: "Python Intelligence",
-    desc: "Statistical modeling and automated intelligence using Python.",
-    tags: ["Python", "Pandas", "AI"],
-    icon: <BrainCircuit size={28} />,
-    color: "text-emerald-500",
-    border: "group-hover:border-emerald-500/40",
-  },
-];
+const AboutPage = () => {
+  const fadeIn = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.6 },
+  };
 
-export default function Courses() {
   return (
-    <div className="bg-[#02040a] text-slate-200 min-h-screen font-sans selection:bg-blue-600 selection:text-white">
-      {/* --- HERO SECTION: FLUID TYPOGRAPHY --- */}
-      <section className="relative pt-24 pb-16 md:pt-40 md:pb-28 px-4 overflow-hidden">
-        {/* Animated Glow Background */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full -z-10 animate-pulse" />
+    <div className="bg-[#02040a] text-slate-300 min-h-screen font-sans selection:bg-blue-600/30 overflow-x-hidden">
+      {/* Background Tech Elements */}
+      <div
+        className="fixed inset-0 z-0 opacity-5 pointer-events-none"
+        style={{
+          backgroundImage: `radial-gradient(#3b82f6 1px, transparent 1px)`,
+          backgroundSize: "40px 40px",
+        }}
+      />
+      {/* --- HERO SECTION --- */}
+      <section className="relative pt-32 pb-12 px-6 overflow-hidden text-center">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[140px] rounded-full -z-10" />
 
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-blue-400 text-[10px] md:text-xs font-black tracking-[0.3em] uppercase mb-8 backdrop-blur-md">
-            <Sparkles size={14} /> New Batch Starting Soon
-          </div>
-
-          {/* Fluid Heading: Scales from 3xl to 8xl */}
-          <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter uppercase italic leading-[0.85] text-white">
-            Future <br />{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-white via-blue-500 to-blue-800">
-              Software
-            </span>
-          </h1>
-
-          <p className="mt-8 text-base md:text-xl lg:text-2xl text-slate-500 max-w-2xl mx-auto font-medium leading-relaxed px-4">
-            Md Dilkhush presents a new era of{" "}
-            <span className="text-white">Gen-AI Coding</span>. Standardizing
-            tech education in Katihar with industrial-grade mentorship.
-          </p>
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/5 border border-blue-500/10 text-blue-400 text-[10px] font-bold tracking-[0.3em] uppercase mb-10">
+          <Cpu size={14} className="animate-pulse" /> Industrial Training
+          Programs
         </div>
+
+        <h1 className="text-5xl md:text-8xl font-extrabold tracking-tight uppercase leading-none mb-6">
+          BEYOND <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-600 to-indigo-600">
+            CODING BOOTCAMPS
+          </span>
+        </h1>
+
+        <p className="text-slate-500 font-semibold tracking-widest uppercase text-xs leading-relaxed max-w-2xl mx-auto">
+          We train students to think like real developers through live practice,
+          clear concepts, and hands on work.
+        </p>
       </section>
+      {/* --- FOUNDER SECTION --- */}
+      <section className="py-24 px-6 relative z-10">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+          {/* LEFT SIDE: PHOTO CARD */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="relative group"
+          >
+            <div className="aspect-[4/5] bg-slate-900 border border-slate-800 rounded-[2.5rem] relative overflow-hidden shadow-2xl group">
+              {/* Image with Enhanced Colors */}
+              <img
+                src="https://media.licdn.com/dms/image/v2/D4D03AQEldctReMxvhQ/profile-displayphoto-crop_800_800/B4DZncvjCtHsAI-/0/1760345076623?e=1772064000&v=beta&t=Qu90zoPPcrG-bCc21LSoJebeYGLLvutCDmsXa3IKShY"
+                alt="Md Dilkash"
+                className="absolute inset-0 w-full h-full object-cover brightness-[0.85] contrast-[1.1] group-hover:brightness-100 group-hover:scale-105 transition-all duration-700 ease-out"
+                onError={(e) => {
+                  e.target.src = "https://images.pexels.com";
+                }}
+              />
 
-      {/* --- BENTO GRID COURSES: FULLY RESPONSIVE --- */}
-      <section className="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-24">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {courses.map((course, index) => (
-            <div
-              key={index}
-              className={`group relative p-6 md:p-10 bg-[#05070a] border border-white/5 rounded-[2rem] md:rounded-[3rem] transition-all duration-500 hover:bg-white/[0.02] ${course.border} flex flex-col justify-between min-h-[350px] md:min-h-[450px]`}
-            >
-              {/* Subtle Corner Glow */}
-              <div className="absolute -top-12 -right-12 w-24 h-24 bg-blue-600/5 blur-3xl group-hover:bg-blue-600/20 transition-all" />
+              {/* Premium Blue & Dark Overlay - Isse photo background se match ho jayegi */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#02040a] via-blue-900/10 to-transparent mix-blend-multiply opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#02040a] via-transparent to-transparent opacity-90" />
 
-              <div>
-                <div
-                  className={`p-4 bg-white/5 rounded-2xl w-fit mb-8 ${course.color} border border-white/10 group-hover:scale-110 transition-transform`}
-                >
-                  {course.icon}
-                </div>
-
-                <h2 className="text-2xl md:text-3xl font-black tracking-tighter uppercase italic mb-2 text-white">
-                  {course.title}
+              {/* Name & Title Container */}
+              <div className="absolute bottom-10 left-10 space-y-1 z-10">
+                <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
+                  Md Dilkash
                 </h2>
-                <p
-                  className={`text-[10px] md:text-xs font-black tracking-[0.2em] uppercase mb-6 ${course.color}`}
-                >
-                  {course.subtitle}
-                </p>
-                <p className="text-slate-400 text-sm md:text-base leading-relaxed mb-8">
-                  {course.desc}
+                <p className="text-blue-500 font-semibold tracking-widest text-xs uppercase">
+                  Founder & Lead Architect
                 </p>
               </div>
+            </div>
+          </motion.div>
 
-              <div className="space-y-6">
-                <div className="flex flex-wrap gap-2">
-                  {course.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-[9px] font-bold px-3 py-1 bg-white/5 border border-white/10 rounded-full text-slate-500 group-hover:text-white transition-colors"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+          {/* RIGHT SIDE: TEXT DETAILS */}
+          <div className="space-y-10 text-left">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl md:text-4xl font-bold tracking-tight text-white mb-6 border-l-4 border-blue-600 pl-6 uppercase">
+                Mentorship & Vision
+              </h3>
+              <p className="text-slate-400 text-lg md:text-xl leading-relaxed font-medium">
+                "I founded{" "}
+                <span className="text-white">Galaxy Software Institute</span> to
+                bridge the gap between local talent and global standards. As an
+                MCA professional, my goal is to provide a structured, industrial
+                approach to software engineering."
+              </p>
+            </motion.div>
+
+            {/* STATS GRID */}
+            <div className="grid grid-cols-2 gap-8 pt-4 border-t border-white/5">
+              <div className="space-y-1">
+                <div className="text-blue-500 text-2xl md:text-3xl font-bold tracking-tight uppercase">
+                  MCA, BCA
                 </div>
-                <button className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white group-hover:text-blue-500 transition-colors">
-                  Explore Syllabus <ArrowUpRight size={14} />
-                </button>
+                <div className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]">
+                  Academic Foundation
+                </div>
+              </div>
+              <div className="space-y-1">
+                <div className="text-blue-500 text-2xl md:text-3xl font-bold tracking-tight uppercase">
+                  EXPERIENCE
+                </div>
+                <div className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]">
+                  Real World Projects
+                </div>
+              </div>
+              <div className="space-y-1">
+                <div className="text-blue-500 text-2xl md:text-3xl font-bold tracking-tight uppercase">
+                  EXPERT
+                </div>
+                <div className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]">
+                  Full Stack AI Systems
+                </div>
+              </div>
+              <div className="space-y-1">
+                <div className="text-blue-500 text-2xl md:text-3xl font-bold tracking-tight uppercase">
+                  INDUSTRIAL
+                </div>
+                <div className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]">
+                  Workflow Training
+                </div>
+              </div>
+            </div>
+
+            <p className="text-slate-600 font-mono text-[10px] uppercase tracking-widest">
+              // Verified Lead Architect_
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* --- VISION & MISSION BENTO --- */}
+      <section className="py-24 px-6 bg-slate-950/50">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+          <motion.div
+            whileHover={{ y: -5 }}
+            className="p-10 md:p-16 bg-slate-900/30 border border-slate-800 rounded-[3rem] relative overflow-hidden group"
+          >
+            <Target
+              className="absolute top-8 right-8 text-blue-500/10"
+              size={80}
+            />
+            <div className="relative z-10 space-y-4">
+              <div className="text-blue-500 font-bold tracking-widest text-xs uppercase">
+                // Execution
+              </div>
+              <h4 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+                Our Mission
+              </h4>
+              <p className="text-slate-400 text-base md:text-lg font-medium leading-relaxed">
+                To democratize software engineering. We empower local talent
+                with
+                <span className="text-white"> Next-Gen tech stacks </span>
+                making them industry-ready.
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ y: -5 }}
+            className="p-10 md:p-16 bg-slate-900/30 border border-slate-800 rounded-[3rem] relative overflow-hidden group"
+          >
+            <Eye
+              className="absolute top-8 right-8 text-blue-500/10"
+              size={80}
+            />
+            <div className="relative z-10 space-y-4">
+              <div className="text-blue-500 font-bold tracking-widest text-xs uppercase">
+                // Future
+              </div>
+              <h4 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+                Our Vision
+              </h4>
+              <p className="text-slate-400 text-base md:text-lg font-medium leading-relaxed">
+                To become Bihar's premier
+                <span className="text-white"> Digital Innovation Hub </span>
+                recognized globally for excellence.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      {/* --- PILLARS --- */}
+      <section className="py-24 px-6 max-w-7xl mx-auto text-center">
+        <h2 className="text-4xl md:text-6xl font-bold mb-16 tracking-tight text-white">
+          Institute Pillars
+        </h2>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            {
+              icon: <BookOpen />,
+              title: "Easy Learning",
+              sub: "Step by step guidance",
+            },
+            {
+              icon: <UserCheck />,
+
+              title: "Personal Mentorship",
+              sub: "Direct doubt support",
+            },
+            {
+              icon: <ClipboardCheck />,
+              title: "Daily Practice",
+              sub: "Regular hands on tasks",
+            },
+            {
+              icon: <Code2 />,
+              title: "Clean Coding",
+              sub: "Good habits from start",
+            },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="bg-slate-900/40 border border-slate-800 p-8 rounded-3xl space-y-4 hover:border-blue-500/30 transition-all group"
+            >
+              <div className="text-blue-500 flex justify-center group-hover:scale-110 transition-transform">
+                {item.icon}
+              </div>
+              <div>
+                <h5 className="text-lg font-bold text-white tracking-tight">
+                  {item.title}
+                </h5>
+                <p className="text-xs text-slate-500 font-medium uppercase tracking-widest mt-1">
+                  {item.sub}
+                </p>
               </div>
             </div>
           ))}
         </div>
       </section>
-
-      {/* --- RESPONSIVE CTA SECTION --- */}
-      <section className="px-4 pb-32">
-        <div className="max-w-5xl mx-auto p-8 md:p-20 rounded-[2.5rem] md:rounded-[4rem] bg-gradient-to-br from-blue-600 to-indigo-900 relative overflow-hidden group">
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com')] opacity-10" />
-
-          <div className="relative z-10 flex flex-col items-center text-center">
-            <h2 className="text-3xl md:text-6xl font-black text-white tracking-tighter uppercase italic leading-none mb-8">
-              Join the First <br className="hidden md:block" /> AI Batch
-            </h2>
-            <p className="text-blue-100 text-sm md:text-lg mb-12 max-w-xl font-medium">
-              Limited seats. Direct mentorship by **Md Dilkhush**. Build your
-              software engineering career with the latest tech stack.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-              <Button
-                size="xl"
-                className="h-16 md:h-20 px-8 md:px-12 bg-white text-black hover:bg-black hover:text-white rounded-2xl font-black text-xs md:text-sm uppercase tracking-[0.2em] transition-all shadow-2xl active:scale-95"
-              >
-                Apply for Admission
-              </Button>
-              <a
-                href="tel:+918709889091"
-                className="h-16 md:h-20 flex items-center justify-center px-8 border border-white/20 hover:bg-white/10 text-white rounded-2xl font-black text-[10px] md:text-xs uppercase tracking-widest transition-all"
-              >
-                Call Support
-              </a>
-            </div>
-          </div>
-
-          {/* Decorative Cursor Icon for Desktop */}
-          <MousePointer2
-            className="hidden lg:block absolute bottom-10 right-10 text-white/20 -rotate-12 animate-bounce"
-            size={100}
-          />
-        </div>
-      </section>
-
-      {/* --- RESPONSIVE FOOTER BAR --- */}
-      <footer className="border-t border-white/5 py-12 px-4 text-center">
-        <p className="text-[10px] md:text-xs font-bold text-slate-600 uppercase tracking-[0.3em]">
-          © {new Date().getFullYear()} Galaxy Software Institute.{" "}
-          <br className="md:hidden" />
-          Designed for the AI Generation.
-        </p>
-      </footer>
     </div>
   );
-}
+};
+
+export default AboutPage;

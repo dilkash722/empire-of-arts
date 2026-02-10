@@ -3,7 +3,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Courses from "./pages/Courses";
-import Results from "./pages/Results";
+// 👇 Is line ko delete kar do, error gayab ho jayega
+// import Results from "./pages/Results";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 
@@ -14,7 +15,6 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
-        <Route path="/results" element={<Results />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
