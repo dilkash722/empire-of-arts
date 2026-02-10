@@ -33,25 +33,26 @@ const AboutPage = () => {
       <section className="relative pt-32 pb-12 px-6 overflow-hidden text-center">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[140px] rounded-full -z-10" />
 
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/5 border border-blue-500/10 text-blue-400 text-[10px] font-bold tracking-[0.3em] uppercase mb-10">
-          <Cpu size={14} className="animate-pulse" /> Industrial Training
-          Programs
-        </div>
-
-        <h1 className="text-5xl md:text-8xl font-extrabold tracking-tight uppercase leading-none mb-6">
-          BEYOND <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-600 to-indigo-600">
-            CODING BOOTCAMPS
+        <div className="space-y-3 mb-10">
+          <span className="text-blue-500 font-mono tracking-[0.4em] text-[10px] sm:text-xs uppercase">
+            Industrial Training Programs
           </span>
-        </h1>
 
-        <p className="text-slate-500 font-semibold tracking-widest uppercase text-xs leading-relaxed max-w-2xl mx-auto">
-          We train students to think like real developers through live practice,
-          clear concepts, and hands on work.
-        </p>
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-white uppercase tracking-tight leading-[1.05]">
+            Beyond <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-600 to-indigo-600">
+              Coding Bootcamps
+            </span>
+          </h1>
+
+          <p className="text-slate-500 w-full md:max-w-xl mx-auto font-mono text-[11px] sm:text-xs leading-relaxed uppercase tracking-tight">
+            // We train students to think like real developers through live
+            practice, clear concepts, and hands on project work.
+          </p>
+        </div>
       </section>
       {/* --- FOUNDER SECTION --- */}
-      <section className="py-24 px-6 relative z-10">
+      <section className="py-16 px-6 relative z-10">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           {/* LEFT SIDE: PHOTO CARD */}
           <motion.div
@@ -97,7 +98,7 @@ const AboutPage = () => {
               <h3 className="text-2xl md:text-4xl font-bold tracking-tight text-white mb-6 border-l-4 border-blue-600 pl-6 uppercase">
                 Mentorship & Vision
               </h3>
-              <p className="text-slate-400 text-lg md:text-xl leading-relaxed font-medium">
+              <p className="text-slate-400 text-lg md:text-xl leading-relaxed max-w-3xl">
                 "I founded{" "}
                 <span className="text-white">Galaxy Software Institute</span> to
                 bridge the gap between local talent and global standards. As an
@@ -149,7 +150,7 @@ const AboutPage = () => {
         </div>
       </section>
       {/* --- VISION & MISSION BENTO --- */}
-      <section className="py-24 px-6 bg-slate-950/50">
+      <section className="py-16 px-6 bg-slate-950/50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
           <motion.div
             whileHover={{ y: -5 }}

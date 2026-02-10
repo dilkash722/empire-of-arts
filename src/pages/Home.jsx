@@ -19,6 +19,8 @@ import {
   Binary,
   Code,
   Shapes,
+  BookOpen,
+  MessageCircle,
 } from "lucide-react";
 
 const HomePage = () => {
@@ -53,192 +55,198 @@ const HomePage = () => {
       </div>
 
       {/* --- 1) HERO SECTION --- */}
-      <section className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 pt-20 overflow-hidden">
+      <section className="relative z-10 pt-28 pb-20 px-6 overflow-hidden">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="text-center max-w-7xl space-y-12"
+          className="text-center max-w-6xl mx-auto space-y-10"
         >
-          {/* Upper Badge */}
+          {/* Top Badge */}
           <motion.div
             variants={itemVariants}
-            className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 backdrop-blur-2xl text-blue-400 text-[11px] font-black tracking-[0.5em] uppercase shadow-[0_0_40px_rgba(59,130,246,0.2)] mx-auto"
+            className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs md:text-sm font-medium tracking-[0.25em] uppercase mx-auto"
           >
-            <Binary size={16} className="animate-pulse" />
-            Galaxy Software Institute
-            <span className="text-slate-500 font-medium tracking-normal">
-              // Katihar
-            </span>
+            <Binary size={14} />
+            CodeCraft Institute
+            <span className="text-slate-500">// Katihar</span>
           </motion.div>
 
-          {/* Main Headline */}
+          {/* Main Heading */}
           <motion.h1
             variants={itemVariants}
-            className="text-7xl md:text-[150px] font-black tracking-[-0.05em] leading-[0.8] text-white uppercase"
+            className="text-4xl sm:text-6xl md:text-8xl font-extrabold leading-tight tracking-tight text-white whitespace-nowrap"
           >
-            GALAXY <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-600 to-indigo-900 drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]">
-              SOFTWARE
+            CODECRAFT{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-600">
+              INSTITUTE
             </span>
           </motion.h1>
 
-          {/* Sub-headline & Description */}
-          <motion.div variants={itemVariants} className="space-y-6">
-            <p className="text-blue-500 font-black tracking-[0.3em] uppercase text-sm md:text-xl">
-              Institute of Software Training & Development
-            </p>
-            <p className="max-w-3xl mx-auto text-slate-400 text-xl md:text-3xl font-light leading-snug tracking-tight">
-              A practical workspace where students build
-              <span className="text-white font-bold"> real-world systems </span>
-              under the mentorship of
-              <span className="text-blue-100/80 font-medium">
-                {" "}
-                industry veterans.
-              </span>
-            </p>
-          </motion.div>
+          {/* Tagline */}
+          <motion.p
+            variants={itemVariants}
+            className="text-blue-500 text-xs sm:text-sm md:text-base font-semibold uppercase tracking-[0.3em]"
+          >
+            Institute of Software Training & Development
+          </motion.p>
+
+          {/* Description */}
+          <motion.p
+            variants={itemVariants}
+            className="text-slate-400 text-base sm:text-lg md:text-2xl leading-relaxed max-w-3xl mx-auto"
+          >
+            Learn software by building real projects. Whiteboard concepts, live
+            coding, and daily hands-on practice using modern AI tools.
+          </motion.p>
 
           {/* Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row justify-center items-center gap-8 pt-6"
+            className="flex flex-col sm:flex-row gap-5 justify-center pt-6"
           >
-            <button className="h-20 px-14 bg-blue-600 hover:bg-blue-500 text-white font-black text-lg rounded-2xl transition-all shadow-[0_25px_50px_-12px_rgba(37,99,235,0.6)] group flex items-center justify-center tracking-tighter">
-              SOFTWARE TRAINING
-              <Zap
-                size={22}
-                className="ml-3 fill-current group-hover:scale-125 transition-transform"
-              />
-            </button>
+            {/* Course Explore */}
+            <a
+              href="/courses"
+              className="inline-flex items-center justify-center gap-3 px-12 py-5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-semibold text-base md:text-lg transition shadow-lg"
+            >
+              <BookOpen size={20} />
+              Course Explore
+            </a>
 
-            <button className="h-20 px-14 border-2 border-white/10 bg-white/5 text-white hover:bg-white hover:text-black rounded-2xl font-black text-lg transition-all duration-500 tracking-tighter uppercase">
-              PROJECT DEVELOPMENT
-            </button>
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/917763937638"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 px-12 py-5 border border-white/10 bg-white/5 text-white hover:bg-white hover:text-black rounded-xl font-semibold text-base md:text-lg transition"
+            >
+              <MessageCircle size={20} />
+              WhatsApp
+            </a>
           </motion.div>
         </motion.div>
       </section>
 
       {/* --- 2) WHAT MAKES US DIFFERENT (BENTO STYLE) --- */}
-      <section className="relative z-10 py-32 px-6 max-w-7xl mx-auto">
-        <div className="flex flex-col items-center md:items-start mb-24 space-y-4">
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: 80 }}
-            className="h-1.5 bg-blue-600 rounded-full"
-          />
-          <h2 className="text-5xl md:text-8xl font-black text-white uppercase tracking-[-0.05em] leading-[0.9]">
-            Beyond <br /> Coaching.
+      <section className="relative z-10 py-20 px-6 max-w-7xl mx-auto">
+        {/* Heading */}
+        <div className="space-y-6 mb-10">
+          <span className="text-blue-500 font-mono tracking-[0.5em] text-xs uppercase animate-pulse">
+            Execution Pipeline
+          </span>
+
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-white uppercase tracking-tight leading-[1.05]">
+            BEYOND <br /> COACHING
           </h2>
-          <p className="text-blue-500 font-mono text-sm tracking-[0.3em] uppercase font-bold">
-            // Professional Dev-Environment // Katihar
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 auto-rows-[300px] gap-6">
-          {/* Box 1: Live Coding (Large) */}
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-12 auto-rows-[280px] gap-6">
+          {/* Box 1 */}
           <motion.div
             whileHover={{ y: -10 }}
-            className="md:col-span-8 md:row-span-1 bg-[#0a0c12] border border-white/5 p-10 rounded-[3.5rem] relative overflow-hidden group shadow-2xl"
+            className="md:col-span-8 bg-[#0a0c12] border border-white/5 p-8 md:p-10 rounded-[3.5rem] group shadow-2xl"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="flex flex-col md:flex-row items-center h-full gap-10 relative z-10">
-              <div className="flex-1 space-y-6">
-                <div className="p-5 bg-blue-600/10 w-fit rounded-[1.5rem] text-blue-500 shadow-inner">
-                  <MonitorPlay size={36} strokeWidth={2.5} />
-                </div>
-                <h3 className="text-4xl font-black text-white uppercase tracking-tighter">
-                  Live Coding
-                </h3>
-                <p className="text-slate-400 text-lg leading-snug font-medium max-w-md">
-                  Software is built step by step in real time so beginners can
-                  clearly see how development actually happens.
-                </p>
+            <div className="space-y-6">
+              <div className="p-4 bg-blue-600/10 w-fit rounded-xl text-blue-500">
+                <MonitorPlay size={30} />
               </div>
-              <div className="hidden md:block text-blue-500/5 group-hover:text-blue-500/10 transition-all duration-700 group-hover:scale-110">
-                <Code size={220} strokeWidth={3} />
-              </div>
-            </div>
-          </motion.div>
 
-          {/* Box 2: AI Assisted (Small) */}
-          <motion.div
-            whileHover={{ y: -10 }}
-            className="md:col-span-4 md:row-span-1 bg-[#0a0c12] border border-white/5 p-10 rounded-[3.5rem] flex flex-col justify-between group shadow-2xl relative overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-gradient-to-t from-indigo-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-            <div className="p-5 bg-indigo-600/10 w-fit rounded-[1.5rem] text-indigo-400 group-hover:rotate-[15deg] transition-transform relative z-10 shadow-inner">
-              <BrainCircuit size={32} />
-            </div>
-            <div className="space-y-4 relative z-10">
-              <h3 className="text-2xl font-black text-white uppercase tracking-tighter">
-                AI Assisted Learning
+              <h3 className="text-2xl md:text-4xl font-bold text-white leading-snug uppercase tracking-tight">
+                Live Coding
               </h3>
-              <p className="text-slate-500 text-sm font-semibold uppercase tracking-tighter leading-tight">
-                Learn how to use LLMs and AI tools in daily coding workflow for
-                faster and smarter development.
+
+              <p className="text-slate-400 text-sm md:text-lg leading-relaxed max-w-md">
+                Software is built step by step in real time so beginners clearly
+                see how development actually happens.
               </p>
             </div>
           </motion.div>
 
-          {/* Box 3: BYO Laptop (Small) */}
+          {/* Box 2 */}
           <motion.div
             whileHover={{ y: -10 }}
-            className="md:col-span-4 md:row-span-1 bg-[#0a0c12] border border-white/5 p-10 rounded-[3.5rem] flex flex-col justify-between group shadow-2xl relative overflow-hidden"
+            className="md:col-span-4 bg-[#0a0c12] border border-white/5 p-8 md:p-10 rounded-[3.5rem] group shadow-2xl"
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-            <div className="p-5 bg-blue-500/10 w-fit rounded-[1.5rem] text-blue-400 group-hover:scale-110 transition-transform relative z-10 shadow-inner">
-              <Laptop size={32} />
-            </div>
-            <div className="space-y-4 relative z-10">
-              <h3 className="text-2xl font-black text-white uppercase tracking-tighter">
-                BYO Laptop
+            <div className="space-y-5">
+              <div className="p-4 bg-indigo-600/10 w-fit rounded-xl text-indigo-400">
+                <BrainCircuit size={28} />
+              </div>
+
+              <h3 className="text-xl md:text-2xl font-bold text-white leading-snug uppercase tracking-tight">
+                AI Assisted Learning
               </h3>
-              <p className="text-slate-500 text-sm font-semibold uppercase tracking-tighter leading-tight">
-                Students write, test, and ship code on their own system like a
+
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Learn how to use AI tools in daily coding workflow for faster
+                and smarter development.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Box 3 */}
+          <motion.div
+            whileHover={{ y: -10 }}
+            className="md:col-span-4 bg-[#0a0c12] border border-white/5 p-8 md:p-10 rounded-[3.5rem] group shadow-2xl"
+          >
+            <div className="space-y-5">
+              <div className="p-4 bg-blue-500/10 w-fit rounded-xl text-blue-400">
+                <Laptop size={28} />
+              </div>
+
+              <h3 className="text-xl md:text-2xl font-bold text-white leading-snug uppercase tracking-tight">
+                Bring Your Laptop
+              </h3>
+
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Students write, test, and run code on their own system like a
                 real developer workspace.
               </p>
             </div>
           </motion.div>
 
-          {/* Box 4: Real Workflow (Large) */}
+          {/* Box 4 */}
           <motion.div
             whileHover={{ y: -10 }}
-            className="md:col-span-8 md:row-span-1 bg-blue-600 p-12 rounded-[3.5rem] text-white flex flex-col md:flex-row items-center justify-between group relative overflow-hidden shadow-[0_30px_60px_-15px_rgba(37,99,235,0.4)]"
+            className="md:col-span-8 relative bg-blue-600 p-8 md:p-12 rounded-[3.5rem] text-white overflow-hidden group shadow-[0_30px_60px_-15px_rgba(37,99,235,0.4)]"
           >
-            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app')] opacity-20 pointer-events-none" />
-            <div className="relative z-10 space-y-8 flex-1">
-              <div className="p-5 bg-white/20 w-fit rounded-[1.5rem] shadow-xl backdrop-blur-md">
-                <Workflow size={36} strokeWidth={2.5} />
-              </div>
-              <div className="space-y-4">
-                <h3 className="text-5xl font-black uppercase leading-none tracking-tighter">
-                  Real <br /> Workflow
-                </h3>
-                <p className="text-blue-100 max-w-sm text-lg font-medium leading-relaxed">
-                  Students observe how a project moves from start to finish
-                  during the live session.
-                </p>
-              </div>
+            <div className="absolute -right-10 top-1/2 -translate-y-1/2 text-[120px] md:text-[180px] font-black opacity-10 tracking-tighter select-none pointer-events-none group-hover:translate-x-6 transition-transform duration-700">
+              CodeCraft
             </div>
-            <div className="hidden lg:block text-[140px] font-black opacity-10 absolute -right-6 tracking-tighter pointer-events-none group-hover:translate-x-10 transition-transform duration-700 select-none">
-              GALAXY
+
+            <div className="relative z-10 space-y-6">
+              <div className="p-4 bg-white/20 w-fit rounded-xl">
+                <Workflow size={30} />
+              </div>
+
+              <h3 className="text-3xl md:text-5xl font-extrabold leading-tight uppercase tracking-tight">
+                Real Workflow
+              </h3>
+
+              <p className="text-blue-100 text-sm md:text-lg max-w-sm leading-relaxed">
+                Students observe how a project moves from start to finish during
+                live sessions and understand real development flow.
+              </p>
             </div>
           </motion.div>
         </div>
       </section>
-      {/* --- 4) HOW CLASSES RUN DAILY --- */}
-      <section className="relative z-10 py-32 px-6 max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
-          <div className="space-y-4">
-            <span className="text-blue-500 font-mono tracking-[0.5em] text-xs uppercase animate-pulse">
+
+      {/* --- 3) HOW CLASSES RUN DAILY --- */}
+      <section className="relative z-10 py-20 px-6 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-8">
+          <div className="space-y-3">
+            <span className="text-blue-500 font-mono tracking-[0.4em] text-[10px] sm:text-xs uppercase animate-pulse">
               Execution Pipeline
             </span>
-            <h2 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter leading-none">
+
+            <h2 className="text-3xl sm:text-5xl md:text-7xl font-black text-white uppercase tracking-tight leading-[1.05]">
               Daily <br /> Workflow
             </h2>
           </div>
-          <p className="text-slate-500 max-w-xs font-mono text-xs leading-relaxed uppercase tracking-tighter border-l border-white/10 pl-4">
+
+          <p className="text-slate-500 w-full md:max-w-xs font-mono text-[11px] sm:text-xs leading-relaxed uppercase tracking-tight md:border-l border-white/10 md:pl-5">
             // standard operating procedure for maximum skill retention.
           </p>
         </div>
@@ -324,15 +332,29 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* --- 5) CALL TO ACTION --- */}
-      <section className="relative z-10 py-24 px-6 text-center">
-        <div className="max-w-4xl mx-auto bg-blue-600 rounded-[3rem] p-12 md:p-20 shadow-[0_40px_100px_-20px_rgba(37,99,235,0.4)]">
-          <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter leading-none mb-8">
-            Start Your <br /> Tech Journey.
+      {/* --- 5) VISIT CODECRAFT INSTITUTE --- */}
+      <section className="relative z-10 py-16 px-4 sm:px-6 text-center">
+        <div className="w-full max-w-7xl mx-auto bg-blue-600 rounded-[2.5rem] md:rounded-[3rem] px-6 sm:px-10 md:px-20 py-12 md:py-20 shadow-[0_40px_100px_-20px_rgba(37,99,235,0.4)]">
+          <h2 className="text-3xl sm:text-5xl md:text-7xl font-extrabold text-white uppercase tracking-tight leading-[1.1] mb-6">
+            Visit CodeCraft <br className="hidden sm:block" />
+            Training Center
           </h2>
-          <Button className="bg-white text-blue-600 hover:bg-black hover:text-white h-16 px-12 rounded-2xl font-black text-lg uppercase tracking-widest transition-all shadow-xl">
-            ENROLL NOW <ArrowRight size={20} className="ml-3" />
-          </Button>
+
+          <p className="text-blue-100 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-10 font-medium">
+            See how real software training happens. Visit our center, watch live
+            coding sessions, interact with the mentor, and understand the
+            complete learning environment before joining.
+          </p>
+
+          <a
+            href="YOUR_GOOGLE_MAP_LINK"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-black hover:text-white h-14 md:h-16 px-10 md:px-14 rounded-2xl font-bold text-sm md:text-lg uppercase tracking-[0.2em] transition-all shadow-xl"
+          >
+            Visit Now
+            <ArrowRight size={18} className="ml-3" />
+          </a>
         </div>
       </section>
     </div>

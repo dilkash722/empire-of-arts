@@ -24,25 +24,32 @@ export default function ContactPage() {
     <div className="bg-[#02040a] text-white min-h-screen font-sans selection:bg-blue-600/30 overflow-x-hidden">
       {/* --- HERO SECTION: EXACT COURSE STYLE --- */}
       <section className="relative pt-32 pb-12 px-6 overflow-hidden text-center">
+        {/* Glow Background */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[140px] rounded-full -z-10" />
 
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/5 border border-blue-500/10 text-blue-400 text-[10px] font-bold tracking-[0.3em] uppercase mb-10">
-          <Cpu size={14} className="animate-pulse" /> Establish_Link v2.0
-        </div>
-
-        <h1 className="text-5xl md:text-8xl font-extrabold tracking-tight uppercase leading-none mb-6">
-          Connect <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-600 to-indigo-600">
-            Galaxy Network
+        <div className="space-y-3 mb-10">
+          {/* Mono Label */}
+          <span className="text-blue-500 font-mono tracking-[0.4em] text-[10px] sm:text-xs uppercase">
+            Contact Interface
           </span>
-        </h1>
-        <p className="text-slate-500 font-semibold tracking-widest uppercase text-xs">
-          Galaxy Software Institute // Software Training & Development
-        </p>
+
+          {/* Main Heading */}
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-white uppercase tracking-tight leading-[1.05]">
+            Connect <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-600 to-indigo-600">
+              CodeCraft Network
+            </span>
+          </h1>
+
+          {/* Paragraph Line */}
+          <p className="text-slate-500 w-full md:max-w-xl mx-auto font-mono text-[11px] sm:text-xs leading-relaxed uppercase tracking-tight">
+            // CodeCraft Institute · Software Training & Development
+          </p>
+        </div>
       </section>
 
       {/* --- CONTENT GRID: BALANCED HEIGHT --- */}
-      <section className="max-w-7xl mx-auto px-6 py-12 md:py-20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      <section className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
         {/* LEFT: INFO CARDS (Flex-1 to match height) */}
         <div className="lg:col-span-5 flex flex-col gap-6">
           {[

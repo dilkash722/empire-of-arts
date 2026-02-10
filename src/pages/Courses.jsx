@@ -101,20 +101,20 @@ export default function Courses() {
       <section className="relative pt-32 pb-12 px-6 overflow-hidden text-center">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[140px] rounded-full -z-10" />
 
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/5 border border-blue-500/10 text-blue-400 text-[10px] font-bold tracking-[0.3em] uppercase mb-10">
-          <Cpu size={14} className="animate-pulse" /> Industrial Training
-          Programs
-        </div>
-
-        <h1 className="text-5xl md:text-8xl font-extrabold tracking-tight uppercase leading-none mb-6">
-          Learning <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-600 to-indigo-600">
-            Playbook Guide
+        <div className="space-y-3 mb-10">
+          <span className="text-blue-500 font-mono tracking-[0.4em] text-[10px] sm:text-xs uppercase animate-pulse">
+            Industrial Training Programs
           </span>
-        </h1>
-        <p className="text-slate-500 font-semibold tracking-widest uppercase text-xs">
-          Galaxy Software Institute // Software Training & Development
-        </p>
+
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-white uppercase tracking-tight leading-[1.05]">
+            Learning <br /> Playbook Guide
+          </h1>
+
+          <p className="text-slate-500 w-full md:max-w-xl mx-auto font-mono text-[11px] sm:text-xs leading-relaxed uppercase tracking-tight">
+            // CodeCraft Institute · Practical Software Training & Real Project
+            Development
+          </p>
+        </div>
       </section>
 
       {/* --- COURSE GRID --- */}
@@ -133,18 +133,20 @@ export default function Courses() {
                 <div className="p-4 bg-white/5 rounded-2xl border border-white/10 group-hover:bg-blue-600/10 transition-all duration-500">
                   {course.icon}
                 </div>
+
                 <div className="text-right">
-                  <div className="text-[10px] font-bold tracking-widest text-blue-500 uppercase mb-1">
+                  <div className="text-xs font-medium tracking-wide text-blue-500 mb-1">
                     Course Path
                   </div>
                   <div className="h-1 w-10 bg-blue-600 ml-auto rounded-full" />
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold tracking-tight uppercase mb-3 group-hover:text-blue-500 transition-colors">
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-3 group-hover:text-blue-500 transition-colors">
                 {course.title}
               </h2>
-              <p className="text-slate-400 text-sm leading-relaxed mb-6 font-medium max-w-lg">
+
+              <p className="text-slate-400 text-sm md:text-base leading-relaxed mb-6 max-w-lg">
                 {course.desc}
               </p>
 
@@ -159,23 +161,22 @@ export default function Courses() {
                       size={14}
                       className="text-blue-500 shrink-0"
                     />
-                    <span className="text-[11px] font-semibold uppercase tracking-wide">
-                      {point}
-                    </span>
+                    <span className="text-sm font-medium">{point}</span>
                   </li>
                 ))}
               </ul>
 
               {/* Tech Stack */}
               <div className="mb-10">
-                <p className="text-[9px] font-bold uppercase tracking-widest text-slate-500 mb-4 flex items-center gap-2">
+                <p className="text-xs font-medium tracking-wide text-slate-500 mb-4 flex items-center gap-2">
                   <Zap size={10} className="fill-current" /> Technical Stack
                 </p>
+
                 <div className="flex flex-wrap gap-2">
                   {course.stack.map((tech) => (
                     <span
                       key={tech}
-                      className="text-[9px] font-semibold px-3 py-1.5 bg-white/5 border border-white/5 rounded-lg text-slate-400 group-hover:text-white transition-colors"
+                      className="text-xs font-medium px-3 py-1.5 bg-white/5 border border-white/5 rounded-lg text-slate-400 group-hover:text-white transition-colors"
                     >
                       {tech}
                     </span>
@@ -184,12 +185,13 @@ export default function Courses() {
               </div>
 
               {/* Footer Actions */}
-              <div className="flex items-center gap-6 pt-6 border-t border-white/5">
-                <Button className="bg-white text-black hover:bg-blue-600 hover:text-white h-11 px-8 rounded-xl font-bold text-[10px] uppercase tracking-widest transition-all shadow-md">
+              <div className="flex items-center gap-6 pt-6 border-t border-white/5 flex-wrap">
+                <Button className="bg-white text-black hover:bg-blue-600 hover:text-white h-11 px-8 rounded-xl font-medium text-sm tracking-wide transition-all shadow-md">
                   Join Program <ArrowRight size={14} className="ml-2" />
                 </Button>
-                <button className="text-[10px] font-bold uppercase tracking-widest text-slate-600 hover:text-white transition-colors">
-                  SYLLABUS
+
+                <button className="text-sm font-medium tracking-wide text-slate-600 hover:text-white transition-colors">
+                  Syllabus
                 </button>
               </div>
             </div>
