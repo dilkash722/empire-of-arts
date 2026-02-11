@@ -12,18 +12,18 @@ export default function Footer() {
           {/* BRAND */}
           <div className="lg:col-span-5 space-y-6">
             <div className="flex flex-col leading-none">
-              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">
-                CodeMint <span className="text-blue-500">Institute</span>
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+                <span className="text-white">CodeMint</span>{" "}
+                <span className="text-blue-500">Institute</span>
               </h2>
-              <span className="text-sm text-slate-500 tracking-wide mt-2">
+              <span className="text-sm text-slate-400 mt-2">
                 Software Training & Development
               </span>
             </div>
 
             <p className="text-slate-500 text-sm leading-relaxed max-w-md">
-              We train students through live coding, whiteboard concepts, and
-              real project practice so they understand how software development
-              actually works in the industry.
+              Practical software training where students learn through live
+              coding, clear concepts, and real project practice.
             </p>
 
             <div className="flex gap-4 pt-2">
@@ -39,9 +39,9 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* QUICK LINKS */}
+          {/* COURSES */}
           <div className="lg:col-span-3">
-            <h3 className="text-sm font-semibold text-white mb-5 uppercase tracking-wide">
+            <h3 className="text-sm font-semibold text-white mb-5 tracking-wide">
               Courses
             </h3>
             <ul className="space-y-3 text-sm">
@@ -65,7 +65,7 @@ export default function Footer() {
 
           {/* CONTACT */}
           <div className="lg:col-span-4">
-            <h3 className="text-sm font-semibold text-white mb-5 uppercase tracking-wide">
+            <h3 className="text-sm font-semibold text-white mb-5 tracking-wide">
               Contact
             </h3>
 

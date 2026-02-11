@@ -55,77 +55,61 @@ const HomePage = () => {
       </div>
 
       {/* --- 1) HERO SECTION --- */}
-      <section className="relative z-10 pt-28 pb-20 px-6 overflow-hidden">
+      <section className="relative pt-32 pb-24 px-6 flex items-center justify-center overflow-hidden">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="text-center max-w-6xl mx-auto space-y-10"
+          className="relative z-10 text-center max-w-5xl mx-auto"
         >
-          {/* Top Badge */}
-          <motion.div
+          {/* Small tag */}
+          <motion.p
             variants={itemVariants}
-            className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs md:text-sm font-medium tracking-[0.25em] uppercase mx-auto"
+            className="text-sm text-slate-400 font-medium tracking-wide"
           >
-            <Binary size={14} />
-            CodeMint Institute
-            <span className="text-slate-500">// Katihar</span>
-          </motion.div>
+            CodeMint Software Training | Katihar
+          </motion.p>
 
           {/* Main Heading */}
           <motion.h1
             variants={itemVariants}
-            className="text-7xl sm:text-7xl md:text-8xl font-extrabold leading-[1.1] tracking-normal text-center md:whitespace-nowrap drop-shadow-[0_8px_30px_rgba(0,255,200,0.15)]"
+            className="mt-6 text-[clamp(3rem,8vw,6rem)] font-bold leading-tight text-white"
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600">
-              Code
-            </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-500">
-              Mint
-            </span>
-
-            <span className="block md:inline mt-2 md:mt-0 text-transparent bg-clip-text bg-gradient-to-r from-slate-300 via-slate-100 to-white md:ml-3">
-              Institute
-            </span>
+            Learn to Build
+            <span className="text-blue-500"> Real Software </span>
+            Projects
           </motion.h1>
-          <motion.p
-            variants={itemVariants}
-            className="text-blue-500 text-xs sm:text-sm md:text-base font-semibold uppercase tracking-[0.3em]"
-          >
-            Institute of Software Training & Development
-          </motion.p>
 
-          {/* Description */}
+          {/* Sub line */}
           <motion.p
             variants={itemVariants}
-            className="text-slate-400 text-base sm:text-lg md:text-2xl leading-relaxed max-w-3xl mx-auto"
+            className="mt-8 text-slate-400 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto"
           >
-            Learn software by building real projects. Whiteboard concepts, live
-            coding, and daily hands-on practice using modern AI tools.
+            Practical training where students write code daily, build live
+            projects, and gain the confidence to work on real client work
+            independently.
           </motion.p>
 
           {/* Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-5 justify-center pt-6"
+            className="mt-12 flex flex-col sm:flex-row gap-4 justify-center"
           >
-            {/* Course Explore */}
             <a
               href="/courses"
-              className="inline-flex items-center justify-center gap-3 px-12 py-5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-semibold text-base md:text-lg transition shadow-lg"
+              className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium text-base transition"
             >
-              <BookOpen size={20} />
-              Course Explore
+              <BookOpen size={18} />
+              Explore Courses
             </a>
 
-            {/* WhatsApp */}
             <a
               href="https://wa.me/917763937638"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 px-12 py-5 border border-white/10 bg-white/5 text-white hover:bg-white hover:text-black rounded-xl font-semibold text-base md:text-lg transition"
+              className="inline-flex items-center justify-center gap-3 px-10 py-4 border border-white/10 bg-white/5 text-white hover:bg-white hover:text-black rounded-lg font-medium text-base transition"
             >
-              <MessageCircle size={20} />
+              <MessageCircle size={18} />
               WhatsApp
             </a>
           </motion.div>
@@ -133,18 +117,17 @@ const HomePage = () => {
       </section>
 
       {/* --- 2) WHAT MAKES US DIFFERENT (BENTO STYLE) --- */}
-      <section className="relative z-10 py-20 px-6 max-w-7xl mx-auto">
+      <section className="relative z-10 pt-8 pb-20 px-6 max-w-7xl mx-auto">
         {/* Heading */}
-        <div className="space-y-6 mb-10">
-          <span className="text-blue-500 font-mono tracking-[0.5em] text-xs uppercase animate-pulse">
+        <div className="space-y-4 mb-12">
+          <span className="text-blue-500 text-xs font-semibold tracking-wide uppercase">
             Practical Learning
           </span>
 
-          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-white tracking-tight leading-[1.05]">
-            Beyond <br /> Coaching
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
+            Beyond Coaching
           </h2>
         </div>
-
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 auto-rows-[280px] gap-6">
           {/* Box 1 */}
@@ -239,19 +222,20 @@ const HomePage = () => {
 
       {/* --- 3) HOW CLASSES RUN DAILY --- */}
       <section className="relative z-10 py-20 px-6 max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-8">
-          <div className="space-y-3">
-            <span className="text-blue-500 font-mono tracking-[0.4em] text-[10px] sm:text-xs uppercase animate-pulse">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
+          <div className="space-y-4">
+            <span className="text-blue-500 text-xs font-semibold tracking-wide uppercase">
               Practice System
             </span>
 
-            <h2 className="text-3xl sm:text-5xl md:text-7xl font-black text-white tracking-tight leading-[1.05]">
-              Daily <br /> Workflow
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
+              Daily Workflow
             </h2>
           </div>
 
-          <p className="text-slate-500 w-full md:max-w-xs font-mono text-[11px] sm:text-xs leading-relaxed uppercase tracking-tight md:border-l border-white/10 md:pl-5">
-            // standard operating procedure for maximum skill retention.
+          <p className="text-slate-400 w-full md:max-w-sm text-sm md:text-base leading-relaxed md:border-l border-white/10 md:pl-6">
+            Our standard routine designed to build strong practical skills
+            through daily coding and project work.
           </p>
         </div>
 

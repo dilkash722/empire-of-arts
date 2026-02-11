@@ -30,183 +30,115 @@ const AboutPage = () => {
         }}
       />
       {/* --- HERO SECTION --- */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden text-center">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[140px] rounded-full -z-10" />
-
-        <div className="max-w-4xl mx-auto">
+      <section className="relative pt-28 pb-12 px-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="max-w-5xl mx-auto space-y-8"
+        >
           {/* Small Label */}
-          <p className="text-blue-500 text-sm font-semibold tracking-widest">
-            Industrial Training Programs
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.6 }}
+            className="text-xs sm:text-sm text-blue-500 font-semibold tracking-wide uppercase"
+          >
+            About CodeMint Institute
+          </motion.p>
 
           {/* Main Heading */}
-          <h1 className="mt-6 text-4xl sm:text-6xl md:text-7xl font-extrabold text-white leading-[1.1] tracking-tight">
-            Beyond{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-600">
-              Coding
-            </span>
-          </h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="text-4xl sm:text-6xl md:text-7xl font-semibold text-white leading-[1.15] tracking-tight"
+          >
+            Learn
+            <span className="text-blue-500"> Real Software Development</span>
+          </motion.h1>
 
           {/* Description */}
-          <p className="mt-8 text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-            We train students to think like real developers through live
-            practice, clear concepts, and hands-on project work that reflects
-            real industry workflows.
-          </p>
-        </div>
-      </section>
-      {/* --- FOUNDER SECTION --- */}
-      <section className="py-16 px-6 relative z-10">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          {/* LEFT SIDE: PHOTO CARD */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="relative group"
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35, duration: 0.6 }}
+            className="text-slate-400 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto font-normal"
           >
-            <div className="aspect-[4/5] bg-slate-900 border border-slate-800 rounded-[2.5rem] relative overflow-hidden shadow-2xl group">
-              {/* Image with Enhanced Colors */}
-              <img
-                src="https://media.licdn.com/dms/image/v2/D4D03AQEldctReMxvhQ/profile-displayphoto-crop_800_800/B4DZncvjCtHsAI-/0/1760345076623?e=1772064000&v=beta&t=Qu90zoPPcrG-bCc21LSoJebeYGLLvutCDmsXa3IKShY"
-                alt="Md Dilkash"
-                className="absolute inset-0 w-full h-full object-cover brightness-[0.85] contrast-[1.1] group-hover:brightness-100 group-hover:scale-105 transition-all duration-700 ease-out"
-                onError={(e) => {
-                  e.target.src = "https://images.pexels.com";
-                }}
-              />
+            We focus on practical learning where students write code daily,
+            build projects step by step, and understand how real software
+            development works in the industry.
+          </motion.p>
+        </motion.div>
+      </section>
 
-              {/* Premium Blue & Dark Overlay - Isse photo background se match ho jayegi */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#02040a] via-blue-900/10 to-transparent mix-blend-multiply opacity-80" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#02040a] via-transparent to-transparent opacity-90" />
+      {/* --- FOUNDER SECTION --- */}
+      <section className="py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="border border-white/10 rounded-2xl overflow-hidden grid md:grid-cols-2"
+          >
+            {/* LEFT AVATAR */}
+            <div className="flex items-center justify-center p-10 md:p-14">
+              <div className="relative">
+                {/* Outer subtle glow */}
+                <div className="absolute inset-0 rounded-full bg-blue-600/10 blur-2xl" />
 
-              {/* Name & Title Container */}
-              <div className="absolute bottom-10 left-10 space-y-1 z-10">
-                <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
+                {/* Circular border avatar */}
+                <div className="relative w-[300px] h-[300px] sm:w-[340px] sm:h-[340px] md:w-[380px] md:h-[380px] rounded-full border border-white/20 p-3 bg-[#0a0c12]">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D4D03AQEldctReMxvhQ/profile-displayphoto-crop_800_800/B4DZncvjCtHsAI-/0/1760345076623?e=1772668800&v=beta&t=t-5Vx7rr6LqEp0Zt4qXauNFLA0puhdHeSfdB_hEXghs"
+                    alt="Founder"
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT CONTENT */}
+            <div className="p-8 md:p-10 space-y-6 flex flex-col justify-center">
+              <div>
+                <h2 className="text-2xl md:text-3xl font-semibold text-white">
                   Md Dilkhush
                 </h2>
-                <p className="text-blue-500 font-semibold tracking-widest text-xs uppercase">
-                  Founder & Lead Architect
+                <p className="text-blue-500 text-sm mt-1">
+                  Founder & Lead Mentor, CodeMint Institute
                 </p>
               </div>
-            </div>
-          </motion.div>
 
-          {/* RIGHT SIDE: TEXT DETAILS */}
-          <div className="space-y-10 text-left">
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl md:text-4xl font-bold tracking-tight text-white mb-6 border-l-4 border-blue-600 pl-6 uppercase">
-                Mentorship & Vision
-              </h3>
-              <p className="text-slate-400 text-lg md:text-xl leading-relaxed max-w-3xl">
-                "I founded{" "}
-                <span className="text-white">CodeMint Institute</span> to bridge
-                the gap between local talent and global standards. As an MCA
-                professional, my goal is to provide a structured, industrial
-                approach to software engineering."
+              <p className="text-slate-400 text-sm md:text-base leading-relaxed">
+                CodeMint Institute focuses on practical software learning
+                through daily coding, real projects, and industry style workflow
+                so students become confident independent developers.
               </p>
-            </motion.div>
 
-            {/* STATS GRID */}
-            <div className="grid grid-cols-2 gap-8 pt-4 border-t border-white/5">
-              <div className="space-y-1">
-                <div className="text-blue-500 text-2xl md:text-3xl font-bold tracking-tight">
-                  MCA, BCA
+              <div className="grid grid-cols-2 gap-6 pt-4 border-t border-white/10 text-sm">
+                <div>
+                  <p className="text-white font-medium">MCA, BCA</p>
+                  <p className="text-slate-500">Academic base</p>
                 </div>
-                <div className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]">
-                  Academic Foundation
+                <div>
+                  <p className="text-white font-medium">Live Projects</p>
+                  <p className="text-slate-500">Hands-on work</p>
                 </div>
-              </div>
-              <div className="space-y-1">
-                <div className="text-blue-500 text-2xl md:text-3xl font-bold tracking-tight">
-                  Experience
+                <div>
+                  <p className="text-white font-medium">Full Stack</p>
+                  <p className="text-slate-500">Modern tools</p>
                 </div>
-                <div className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]">
-                  Real World Projects
-                </div>
-              </div>
-              <div className="space-y-1">
-                <div className="text-blue-500 text-2xl md:text-3xl font-bold tracking-tight">
-                  Expert
-                </div>
-                <div className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]">
-                  Full Stack AI Systems
+                <div>
+                  <p className="text-white font-medium">Workflow</p>
+                  <p className="text-slate-500">Industry practice</p>
                 </div>
               </div>
-              <div className="space-y-1">
-                <div className="text-blue-500 text-2xl md:text-3xl font-bold tracking-tight">
-                  Industrial
-                </div>
-                <div className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]">
-                  Workflow Training
-                </div>
-              </div>
-            </div>
-
-            <p className="text-slate-600 font-mono text-[10px] uppercase tracking-widest">
-              // Verified Lead Architect_
-            </p>
-          </div>
-        </div>
-      </section>
-      {/* --- VISION & MISSION BENTO --- */}
-      <section className="py-16 px-6 bg-slate-950/50">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
-          <motion.div
-            whileHover={{ y: -5 }}
-            className="p-10 md:p-16 bg-slate-900/30 border border-slate-800 rounded-[3rem] relative overflow-hidden group"
-          >
-            <Target
-              className="absolute top-8 right-8 text-blue-500/10"
-              size={80}
-            />
-            <div className="relative z-10 space-y-4">
-              <div className="text-blue-500 font-bold tracking-widest text-xs uppercase">
-                // Execution
-              </div>
-              <h4 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-                Our Mission
-              </h4>
-              <p className="text-slate-400 text-base md:text-lg font-medium leading-relaxed">
-                To make software engineering accessible to everyone. We train
-                students with
-                <span className="text-white"> modern tech stacks </span>
-                and real projects to make them industry ready.
-              </p>
-            </div>
-          </motion.div>
-
-          <motion.div
-            whileHover={{ y: -5 }}
-            className="p-10 md:p-16 bg-slate-900/30 border border-slate-800 rounded-[3rem] relative overflow-hidden group"
-          >
-            <Eye
-              className="absolute top-8 right-8 text-blue-500/10"
-              size={80}
-            />
-            <div className="relative z-10 space-y-4">
-              <div className="text-blue-500 font-bold tracking-widest text-xs uppercase">
-                // Future
-              </div>
-              <h4 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-                Our Vision
-              </h4>
-              <p className="text-slate-400 text-base md:text-lg font-medium leading-relaxed">
-                Helping students become
-                <span className="text-white"> independent developers </span>
-                by building real client projects with practical skills and
-                confidence.
-              </p>
             </div>
           </motion.div>
         </div>
       </section>
       {/* --- PILLARS --- */}
-      <section className="py-24 px-6 max-w-7xl mx-auto text-center">
+      <section className="py-16 px-6 max-w-7xl mx-auto text-center">
         <h2 className="text-4xl md:text-6xl font-bold mb-16 tracking-tight text-white">
           CodeMint Pillars
         </h2>

@@ -9,6 +9,7 @@ import {
   Zap,
   Cpu,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const courses = [
   {
@@ -98,29 +99,51 @@ export default function Courses() {
   return (
     <div className="bg-[#02040a] text-white min-h-screen font-sans pb-24 selection:bg-blue-600/30">
       {/* --- HERO SECTION --- */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden text-center">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[140px] rounded-full -z-10" />
-
-        <div className="max-w-4xl mx-auto">
+      <section className="relative pt-28 pb-20 px-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.8,
+            ease: [0.16, 1, 0.3, 1],
+            staggerChildren: 0.15,
+          }}
+          className="max-w-5xl mx-auto space-y-6"
+        >
           {/* Small Label */}
-          <p className="text-blue-500 text-sm font-semibold tracking-widest">
-            Industrial Training Programs
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-sm text-blue-500 font-medium tracking-wide"
+          >
+            Our Programs
+          </motion.p>
 
           {/* Main Heading */}
-          <h1 className="mt-6 text-4xl sm:text-6xl md:text-7xl font-extrabold text-white leading-[1.1] tracking-tight">
+          <motion.h1
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight"
+          >
             Our Learning Path
-          </h1>
+          </motion.h1>
 
           {/* Description */}
-          <p className="mt-8 text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-            Structured programs designed to build strong fundamentals, practical
-            skills, and real project experience required in the software
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto"
+          >
+            Well structured training programs focused on strong fundamentals,
+            practical skills, and real project experience used in the software
             industry.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </section>
-
       {/* --- COURSE GRID --- */}
       <section className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
         {courses.map((course, index) => (

@@ -9,8 +9,6 @@ import {
   BookOpen,
   Globe,
   ChevronRight,
-  Zap,
-  ArrowRight,
 } from "lucide-react";
 
 const links = [
@@ -46,21 +44,35 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* BRAND */}
-          <Link to="/" className="flex flex-col leading-none">
-            <span className="text-2xl md:text-3xl font-semibold tracking-tight">
-              <span className="text-white">CodeMint</span>{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600">
-                Institute
-              </span>
-            </span>
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Link to="/" className="flex flex-col leading-none">
+              <motion.span
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="text-2xl md:text-3xl font-bold tracking-tight"
+              >
+                <span className="text-white">CodeMint</span>{" "}
+                <span className="text-blue-500">Institute</span>
+              </motion.span>
 
-            <span className="text-base text-slate-400 tracking-wide">
-              Software Training & Development
-            </span>
-          </Link>
+              <motion.span
+                initial={{ opacity: 0, y: -8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="text-sm text-slate-400"
+              >
+                Software Training & Development
+              </motion.span>
+            </Link>
+          </motion.div>
 
           {/* DESKTOP NAV */}
-          <nav className="hidden lg:flex items-center gap-1 bg-white/[0.03] border border-white/5 p-1.5 rounded-xl backdrop-blur-xl">
+          <nav className="hidden lg:flex items-center gap-2">
             {links.map((link) => {
               const Icon = link.icon;
               const active = pathname === link.path;
@@ -68,10 +80,8 @@ export default function Navbar() {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                    active
-                      ? "bg-blue-600 text-white"
-                      : "text-slate-400 hover:text-white hover:bg-white/5"
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition ${
+                    active ? "text-white" : "text-slate-400 hover:text-white"
                   }`}
                 >
                   <Icon size={16} />
@@ -81,23 +91,13 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* ENROLL BUTTON + TOGGLE */}
-          <div className="flex items-center gap-3">
-            <Link
-              to="/contact"
-              className="hidden md:flex items-center gap-2 px-6 py-3 bg-blue-600 text-white text-[11px] font-semibold tracking-wide rounded-xl hover:bg-white hover:text-black transition-all active:scale-95 shadow-lg"
-            >
-              <Zap size={14} fill="currentColor" />
-              Enroll Now
-            </Link>
-
-            <button
-              onClick={() => setOpen(true)}
-              className="lg:hidden p-2.5 bg-white/5 border border-white/10 rounded-lg text-white"
-            >
-              <Menu size={22} />
-            </button>
-          </div>
+          {/* TOGGLE */}
+          <button
+            onClick={() => setOpen(true)}
+            className="lg:hidden p-2.5 bg-white/5 border border-white/10 rounded-lg text-white"
+          >
+            <Menu size={22} />
+          </button>
         </div>
       </header>
 
@@ -118,7 +118,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.45 }}
-              className="fixed top-0 right-0 h-full w-full max-w-sm bg-[#0a0c12] z-[150] px-8 pt-16 pb-10 flex flex-col"
+              className="fixed top-0 right-0 h-full w-full max-w-sm bg-[#0a0c12] z-[150] px-8 pt-20 pb-10 flex flex-col"
             >
               <button
                 onClick={() => setOpen(false)}
@@ -127,7 +127,18 @@ export default function Navbar() {
                 <X size={22} />
               </button>
 
-              <div className="mt-12 space-y-6">
+              {/* Drawer Branding */}
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-white">
+                  CodeMint <span className="text-blue-500">Institute</span>
+                </h2>
+                <p className="text-sm text-slate-400 mt-2">
+                  Software Training & Development
+                </p>
+              </div>
+
+              {/* Links */}
+              <div className="space-y-4">
                 {links.map((link, i) => {
                   const Icon = link.icon;
                   const active = pathname === link.path;
@@ -159,18 +170,6 @@ export default function Navbar() {
                     </motion.div>
                   );
                 })}
-              </div>
-
-              {/* SAME ENROLL BUTTON IN DRAWER */}
-              <div className="mt-auto pt-10">
-                <Link
-                  to="/contact"
-                  onClick={() => setOpen(false)}
-                  className="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 text-white text-sm font-semibold tracking-wide rounded-xl hover:bg-white hover:text-black transition-all"
-                >
-                  <Zap size={14} />
-                  Enroll Now <ArrowRight size={16} />
-                </Link>
               </div>
             </motion.div>
           </>
