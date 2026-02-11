@@ -75,15 +75,19 @@ const HomePage = () => {
           {/* Main Heading */}
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-6xl md:text-8xl font-extrabold leading-tight tracking-tight text-white whitespace-nowrap"
+            className="text-7xl sm:text-7xl md:text-8xl font-extrabold leading-[1.1] tracking-normal text-center md:whitespace-nowrap drop-shadow-[0_8px_30px_rgba(0,255,200,0.15)]"
           >
-            CodeMint{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600">
+              Code
+            </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-500">
+              Mint
+            </span>
+
+            <span className="block md:inline mt-2 md:mt-0 text-transparent bg-clip-text bg-gradient-to-r from-slate-300 via-slate-100 to-white md:ml-3">
               Institute
             </span>
           </motion.h1>
-
-          {/* Tagline */}
           <motion.p
             variants={itemVariants}
             className="text-blue-500 text-xs sm:text-sm md:text-base font-semibold uppercase tracking-[0.3em]"
@@ -133,7 +137,7 @@ const HomePage = () => {
         {/* Heading */}
         <div className="space-y-6 mb-10">
           <span className="text-blue-500 font-mono tracking-[0.5em] text-xs uppercase animate-pulse">
-            Practical Learning System
+            Practical Learning
           </span>
 
           <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-white tracking-tight leading-[1.05]">

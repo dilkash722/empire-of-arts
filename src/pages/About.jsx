@@ -43,7 +43,7 @@ const AboutPage = () => {
           <h1 className="mt-6 text-4xl sm:text-6xl md:text-7xl font-extrabold text-white leading-[1.1] tracking-tight">
             Beyond{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-600">
-              Coding Bootcamps
+              Coding
             </span>
           </h1>
 
@@ -172,10 +172,10 @@ const AboutPage = () => {
                 Our Mission
               </h4>
               <p className="text-slate-400 text-base md:text-lg font-medium leading-relaxed">
-                To democratize software engineering. We empower local talent
-                with
-                <span className="text-white"> Next-Gen tech stacks </span>
-                making them industry-ready.
+                To make software engineering accessible to everyone. We train
+                students with
+                <span className="text-white"> modern tech stacks </span>
+                and real projects to make them industry ready.
               </p>
             </div>
           </motion.div>
@@ -196,9 +196,10 @@ const AboutPage = () => {
                 Our Vision
               </h4>
               <p className="text-slate-400 text-base md:text-lg font-medium leading-relaxed">
-                To become Bihar's premier
-                <span className="text-white"> Digital Innovation Hub </span>
-                recognized globally for excellence.
+                Helping students become
+                <span className="text-white"> independent developers </span>
+                by building real client projects with practical skills and
+                confidence.
               </p>
             </div>
           </motion.div>

@@ -15,8 +15,8 @@ import {
 
 const links = [
   { name: "Home", path: "/", icon: Home },
-  { name: "Our Courses", path: "/courses", icon: BookOpen },
   { name: "About", path: "/about", icon: Info },
+  { name: "Our Courses", path: "/courses", icon: BookOpen },
   { name: "Contact", path: "/contact", icon: Globe },
 ];
 
@@ -47,11 +47,14 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* BRAND */}
           <Link to="/" className="flex flex-col leading-none">
-            <span className="text-2xl md:text-3xl font-semibold tracking-tight text-white">
-              CodeMint <span className="text-blue-500">Institute</span>
+            <span className="text-2xl md:text-3xl font-semibold tracking-tight">
+              <span className="text-white">CodeMint</span>{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600">
+                Institute
+              </span>
             </span>
 
-            <span className="text-base text-slate-500 tracking-wide ">
+            <span className="text-base text-slate-400 tracking-wide">
               Software Training & Development
             </span>
           </Link>

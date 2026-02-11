@@ -32,7 +32,7 @@ export default function ContactPage() {
           </p>
 
           <h1 className="mt-6 text-4xl sm:text-6xl font-extrabold text-white leading-tight">
-            Contact CodeMint Institute
+            Contact CodeMint
           </h1>
 
           <p className="mt-6 text-slate-400 text-base sm:text-lg leading-relaxed">
@@ -78,7 +78,7 @@ export default function ContactPage() {
                   <p className="text-[10px] font-bold text-blue-600/60 tracking-[0.2em] uppercase mb-1">
                     // {card.label}
                   </p>
-                  <h3 className="text-xl md:text-2xl font-bold uppercase tracking-tight text-white leading-none mb-1">
+                  <h3 className="text-xl md:text-2xl font-bold tracking-tight text-white leading-none mb-1">
                     {card.value}
                   </h3>
                   <p className="text-slate-500 text-[10px] font-semibold uppercase tracking-widest">
@@ -108,7 +108,7 @@ export default function ContactPage() {
               <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-blue-500">
                 Data_Registry
               </span>
-              <h3 className="text-2xl md:text-4xl font-bold uppercase tracking-tight text-white">
+              <h3 className="text-2xl md:text-4xl font-bold tracking-tight text-white">
                 Transmission
               </h3>
             </div>
@@ -120,7 +120,7 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="text"
-                  className="w-full bg-transparent border-b border-slate-800 focus:border-blue-600 py-2 text-lg md:text-xl outline-none transition-all font-semibold uppercase tracking-tight text-white placeholder:text-slate-800"
+                  className="w-full bg-transparent border-b border-slate-800 focus:border-blue-600 py-2 text-lg md:text-xl outline-none transition-all font-semibold tracking-tight text-white placeholder:text-slate-800"
                   placeholder="Full Name"
                 />
               </div>
@@ -131,7 +131,7 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="tel"
-                  className="w-full bg-transparent border-b border-slate-800 focus:border-blue-600 py-2 text-lg md:text-xl outline-none transition-all font-semibold uppercase tracking-tight text-white placeholder:text-slate-800"
+                  className="w-full bg-transparent border-b border-slate-800 focus:border-blue-600 py-2 text-lg md:text-xl outline-none transition-all font-semibold tracking-tight text-white placeholder:text-slate-800"
                   placeholder="+91 Mobile"
                 />
               </div>
@@ -142,14 +142,14 @@ export default function ContactPage() {
                 </label>
                 <textarea
                   rows="1"
-                  className="w-full bg-transparent border-b border-slate-800 focus:border-blue-600 py-2 text-lg md:text-xl outline-none transition-all font-semibold uppercase tracking-tight text-white placeholder:text-slate-800 resize-none"
+                  className="w-full bg-transparent border-b border-slate-800 focus:border-blue-600 py-2 text-lg md:text-xl outline-none transition-all font-semibold tracking-tight text-white placeholder:text-slate-800 resize-none"
                   placeholder="Details..."
                 />
               </div>
             </div>
 
-            <button className="w-full h-16 bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm rounded-2xl transition-all shadow-lg group flex items-center justify-center tracking-[0.2em] uppercase">
-              SEND DATA
+            <button className="w-full h-16 bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm rounded-2xl transition-all shadow-lg group flex items-center justify-center tracking-[0.2em]">
+              Send Message
               <Zap
                 size={18}
                 className="ml-3 fill-current group-hover:scale-110 transition-transform"
