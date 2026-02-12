@@ -44,32 +44,15 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* BRAND */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <Link to="/" className="flex flex-col leading-none">
-              <motion.span
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="text-2xl md:text-3xl font-bold tracking-tight"
-              >
-                <span className="text-white">CodeMint</span>{" "}
-                <span className="text-blue-500">Institute</span>
-              </motion.span>
+          <Link to="/" className="flex flex-col group leading-tight w-fit">
+            <span className="text-3xl md:text-4xl font-bold tracking-tight text-white transition-all duration-500 group-hover:tracking-wide">
+              Nadil<span className="text-blue-500">ix</span>
+            </span>
 
-              <motion.span
-                initial={{ opacity: 0, y: -8 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="text-sm text-slate-400"
-              >
-                Software Training & Development
-              </motion.span>
-            </Link>
-          </motion.div>
+            <span className="text-slate-300 text-xs md:text-sm font-medium transition-all duration-500 group-hover:text-white">
+              Build Skills. Build Software.
+            </span>
+          </Link>
 
           {/* DESKTOP NAV */}
           <nav className="hidden lg:flex items-center gap-2">
@@ -130,7 +113,7 @@ export default function Navbar() {
               {/* Drawer Branding */}
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-white">
-                  CodeMint <span className="text-blue-500">Institute</span>
+                  Nadilix <span className="text-blue-500"></span>
                 </h2>
                 <p className="text-sm text-slate-400 mt-2">
                   Software Training & Development

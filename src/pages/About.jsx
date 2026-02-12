@@ -44,7 +44,7 @@ const AboutPage = () => {
             transition={{ delay: 0.1, duration: 0.6 }}
             className="text-xs sm:text-sm text-blue-500 font-semibold tracking-wide uppercase"
           >
-            About CodeMint Institute
+            About Nadilix
           </motion.p>
 
           {/* Main Heading */}
@@ -52,7 +52,7 @@ const AboutPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-4xl sm:text-6xl md:text-7xl font-semibold text-white leading-[1.15] tracking-tight"
+            className="text-4xl sm:text-6xl md:text-7xl font-bold text-white leading-[1.15] tracking-tight"
           >
             Learn
             <span className="text-blue-500"> Real Software Development</span>
@@ -105,14 +105,14 @@ const AboutPage = () => {
                   Md Dilkhush
                 </h2>
                 <p className="text-blue-500 text-sm mt-1">
-                  Founder & Lead Mentor, CodeMint Institute
+                  Founder & Lead Mentor, Nadilix
                 </p>
               </div>
 
               <p className="text-slate-400 text-sm md:text-base leading-relaxed">
-                CodeMint Institute focuses on practical software learning
-                through daily coding, real projects, and industry style workflow
-                so students become confident independent developers.
+                Nadilix focuses on practical software learning through daily
+                coding, real projects, and industry style workflow so students
+                become confident independent developers.
               </p>
 
               <div className="grid grid-cols-2 gap-6 pt-4 border-t border-white/10 text-sm">
@@ -140,7 +140,7 @@ const AboutPage = () => {
       {/* --- PILLARS --- */}
       <section className="py-16 px-6 max-w-7xl mx-auto text-center">
         <h2 className="text-4xl md:text-6xl font-bold mb-16 tracking-tight text-white">
-          CodeMint Pillars
+          Nadilix Pillars
         </h2>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {[

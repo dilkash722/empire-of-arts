@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import TechStackStrip from "@/components/TechStackStrip";
 import {
   Terminal,
   Cpu,
@@ -55,19 +57,19 @@ const HomePage = () => {
       </div>
 
       {/* --- 1) HERO SECTION --- */}
-      <section className="relative pt-32 pb-24 px-6 flex items-center justify-center overflow-hidden">
+      <section className="relative pt-32 pb-16 px-6 flex items-center justify-center overflow-hidden">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="relative z-10 text-center max-w-5xl mx-auto"
         >
-          {/* Small tag */}
+          {/* Small Tag */}
           <motion.p
             variants={itemVariants}
             className="text-sm text-slate-400 font-medium tracking-wide"
           >
-            CodeMint Software Training | Katihar
+            Nadilix Software Training & Development | Katihar
           </motion.p>
 
           {/* Main Heading */}
@@ -80,14 +82,14 @@ const HomePage = () => {
             Projects
           </motion.h1>
 
-          {/* Sub line */}
+          {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="mt-8 text-slate-400 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto"
+            className="mt-8 text-slate-300 text-lg md:text-xl leading-snug max-w-3xl mx-auto font-light"
           >
-            Practical training where students write code daily, build live
-            projects, and gain the confidence to work on real client work
-            independently.
+            Nadilix is a practical software training and development center
+            where students code daily, build real projects, and businesses
+            receive reliable, production-ready solutions.
           </motion.p>
 
           {/* Buttons */}
@@ -95,13 +97,13 @@ const HomePage = () => {
             variants={itemVariants}
             className="mt-12 flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <a
-              href="/courses"
+            <Link
+              to="/courses"
               className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium text-base transition"
             >
               <BookOpen size={18} />
               Explore Courses
-            </a>
+            </Link>
 
             <a
               href="https://wa.me/917763937638"
@@ -199,7 +201,7 @@ const HomePage = () => {
             className="md:col-span-8 relative bg-blue-600 p-8 md:p-12 rounded-[3.5rem] text-white overflow-hidden group shadow-[0_30px_60px_-15px_rgba(37,99,235,0.4)]"
           >
             <div className="absolute -right-10 top-1/2 -translate-y-1/2 text-[120px] md:text-[180px] font-black opacity-10 tracking-tighter select-none pointer-events-none group-hover:translate-x-6 transition-transform duration-700">
-              CodeMint
+              Nadilix
             </div>
 
             <div className="relative z-10 space-y-6">
@@ -217,6 +219,26 @@ const HomePage = () => {
               </p>
             </div>
           </motion.div>
+        </div>
+      </section>
+      {/* --- TECH STACK STRIP SECTION --- */}
+      <section className="relative z-10 px-6 py-12">
+        <div className="max-w-[77rem] mx-auto">
+          {/* Heading */}
+          <div className="space-y-4 mb-12">
+            <span className="text-blue-500 text-xs font-semibold tracking-wide uppercase">
+              Technology Stack
+            </span>
+
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
+              Daily Tools
+            </h2>
+          </div>
+
+          {/* Transparent Card */}
+          <div className="border border-white/10 rounded-3xl px-8 md:px-14 py-10">
+            <TechStackStrip />
+          </div>
         </div>
       </section>
 
@@ -320,18 +342,18 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* --- 5) VISIT CodeMint INSTITUTE --- */}
+      {/* --- 5) VISIT Nadilix INSTITUTE --- */}
       <section className="relative z-10 py-16 px-4 sm:px-6 text-center">
         <div className="relative group overflow-hidden w-full max-w-6xl mx-auto bg-blue-600 rounded-[2.5rem] md:rounded-[3rem] px-6 sm:px-10 md:px-20 py-12 md:py-20 shadow-[0_40px_100px_-20px_rgba(37,99,235,0.4)]">
-          {/* Background CodeMint Text */}
+          {/* Background Nadilix Text */}
           <div className="absolute -right-10 top-1/2 -translate-y-1/2 mr-15 text-[120px] md:text-[210px] font-black opacity-16 tracking-tighter select-none pointer-events-none group-hover:translate-x-6 transition-transform duration-700">
-            CodeMint
+            Nadilix
           </div>
 
           {/* Content */}
           <div className="relative z-10">
             <h2 className="text-3xl sm:text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-6">
-              Visit CodeMint <br className="hidden sm:block" />
+              Visit Nadilix <br className="hidden sm:block" />
               Training Center
             </h2>
 

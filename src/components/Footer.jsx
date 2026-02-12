@@ -10,15 +10,15 @@ export default function Footer() {
         {/* TOP GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-14">
           {/* BRAND */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="flex flex-col leading-none">
-              <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
-                <span className="text-white">CodeMint</span>{" "}
-                <span className="text-blue-500">Institute</span>
+          <div className="lg:col-span-5 space-y-4">
+            <div className="flex flex-col group leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white transition-all duration-500 group-hover:tracking-wide">
+                Nadil<span className="text-blue-500">ix</span>
               </h2>
-              <span className="text-sm text-slate-400 mt-2">
-                Software Training & Development
-              </span>
+
+              <p className="text-slate-300 text-xs md:text-sm font-medium transition-all duration-500 group-hover:text-white">
+                Build Skills. Build Software.
+              </p>
             </div>
 
             <p className="text-slate-500 text-sm leading-relaxed max-w-md">
@@ -86,7 +86,7 @@ export default function Footer() {
         {/* BOTTOM STRIP */}
         <div className="pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
           <p className="text-slate-600">
-            © {currentYear} CodeMint Institute. All rights reserved.
+            © {currentYear} Nadilix . All rights reserved.
           </p>
 
           <div className="flex gap-6">

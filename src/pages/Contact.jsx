@@ -37,7 +37,7 @@ export default function ContactPage() {
             transition={{ delay: 0.2 }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight"
           >
-            Contact CodeMint
+            Contact Nadilix
           </motion.h1>
 
           <motion.p
