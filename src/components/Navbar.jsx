@@ -42,14 +42,14 @@ export default function Navbar() {
             : "bg-transparent py-6"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-5 md:px-8 lg:px-10 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8 lg:px-10 flex items-center justify-between">
           {/* BRAND */}
           <Link
             to="/"
             className="group flex flex-col items-start select-none outline-none"
           >
             <div className="relative flex items-end">
-              <h1 className="text-3xl md:text-[38px] font-extrabold tracking-tight text-white leading-none">
+              <h1 className="text-2xl sm:text-3xl md:text-[36px] font-bold tracking-tight text-white leading-none">
                 Nadil
                 <span className="text-blue-600 font-black">ix</span>
               </h1>
@@ -126,7 +126,7 @@ export default function Navbar() {
               {/* Drawer Branding */}
               <div className="group flex flex-col items-start mb-12 select-none">
                 <div className="relative flex items-end">
-                  <h2 className="text-3xl md:text-[38px] font-extrabold tracking-tight text-white leading-none">
+                  <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white leading-none">
                     Nadil
                     <span className="text-blue-600 font-black">ix</span>
                   </h2>

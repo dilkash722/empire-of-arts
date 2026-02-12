@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="lg:col-span-5 space-y-5">
               <div className="group flex flex-col items-start leading-tight select-none">
                 <div className="relative flex items-end">
-                  <h2 className="text-3xl md:text-[38px] font-extrabold tracking-tight text-white leading-none">
+                  <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold tracking-tight text-white leading-none">
                     Nadil
                     <span className="text-blue-600 font-black">ix</span>
                   </h2>

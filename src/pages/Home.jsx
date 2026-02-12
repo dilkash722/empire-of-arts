@@ -234,7 +234,7 @@ const HomePage = () => {
             </span>
 
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-white leading-tight">
-              Daily Tools
+              Tech Stack
             </h2>
           </div>
 
