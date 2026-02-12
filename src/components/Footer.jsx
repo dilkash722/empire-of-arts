@@ -11,14 +11,27 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-14">
           {/* BRAND */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="flex flex-col group leading-tight">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white transition-all duration-500 group-hover:tracking-wide">
-                Nadil<span className="text-blue-500">ix</span>
-              </h2>
+            <div className="lg:col-span-5 space-y-5">
+              <div className="group flex flex-col items-start leading-tight select-none">
+                <div className="relative flex items-end">
+                  <h2 className="text-3xl md:text-[38px] font-extrabold tracking-tight text-white leading-none">
+                    Nadil
+                    <span className="text-blue-600 font-black">ix</span>
+                  </h2>
 
-              <p className="text-slate-300 text-xs md:text-sm font-medium transition-all duration-500 group-hover:text-white">
-                Build Skills. Build Software.
-              </p>
+                  <span className="mb-1 ml-1.5 h-2 w-2 rounded-full bg-blue-600 opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
+                </div>
+
+                <div className="mt-2 flex items-center gap-3">
+                  <div className="h-[1px] w-6 bg-slate-700 group-hover:w-9 group-hover:bg-blue-600 transition-all duration-300"></div>
+
+                  <p className="text-[10px] md:text-[11px] font-semibold text-slate-400 uppercase tracking-[0.25em] leading-none group-hover:text-slate-300 transition-colors duration-300">
+                    Build Skills
+                    <span className="mx-1 text-slate-600">/</span>
+                    Build Software
+                  </p>
+                </div>
+              </div>
             </div>
 
             <p className="text-slate-500 text-sm leading-relaxed max-w-md">
