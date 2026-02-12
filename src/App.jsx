@@ -3,8 +3,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Courses from "./pages/Courses";
-// 👇 Is line ko delete kar do, error gayab ho jayega
-// import Results from "./pages/Results";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 

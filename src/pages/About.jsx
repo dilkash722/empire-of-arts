@@ -82,13 +82,13 @@ const AboutPage = () => {
             className="border border-white/10 rounded-2xl overflow-hidden grid md:grid-cols-2"
           >
             {/* LEFT AVATAR */}
-            <div className="flex items-center justify-center p-10 md:p-14">
-              <div className="relative">
+            <div className="flex justify-center items-center px-6 sm:px-8 md:px-0 py-10 md:py-14 w-full">
+              <div className="relative mx-auto">
                 {/* Outer subtle glow */}
                 <div className="absolute inset-0 rounded-full bg-blue-600/10 blur-2xl" />
 
                 {/* Circular border avatar */}
-                <div className="relative w-[300px] h-[300px] sm:w-[340px] sm:h-[340px] md:w-[380px] md:h-[380px] rounded-full border border-white/20 p-3 bg-[#0a0c12]">
+                <div className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] md:w-[380px] md:h-[380px] rounded-full border border-white/20 p-3 bg-[#0a0c12]">
                   <img
                     src="https://media.licdn.com/dms/image/v2/D4D03AQEldctReMxvhQ/profile-displayphoto-crop_800_800/B4DZncvjCtHsAI-/0/1760345076623?e=1772668800&v=beta&t=t-5Vx7rr6LqEp0Zt4qXauNFLA0puhdHeSfdB_hEXghs"
                     alt="Founder"
@@ -139,7 +139,7 @@ const AboutPage = () => {
       </section>
       {/* --- PILLARS --- */}
       <section className="py-16 px-6 max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl md:text-6xl font-bold mb-16 tracking-tight text-white">
+        <h2 className="text-4xl md:text-6xl font-bold mb-16 tracking-tighter text-white">
           Nadilix Pillars
         </h2>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">

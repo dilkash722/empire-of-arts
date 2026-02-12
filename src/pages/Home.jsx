@@ -122,12 +122,12 @@ const HomePage = () => {
       <section className="relative z-10 pt-8 pb-20 px-6 max-w-7xl mx-auto">
         {/* Heading */}
         <div className="space-y-4 mb-12">
-          <span className="text-blue-500 text-xs font-semibold tracking-wide uppercase">
+          <span className="text-blue-500 text-xs font-semibold uppercase">
             Practical Learning
           </span>
 
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
-            Beyond Coaching
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-white leading-tight">
+            Code Practice
           </h2>
         </div>
         {/* Grid */}
@@ -148,7 +148,7 @@ const HomePage = () => {
 
               <p className="text-slate-400 text-sm md:text-lg leading-relaxed max-w-md">
                 Software is built step by step in real time so beginners clearly
-                see how development actually happens.
+                understand how development actually works.
               </p>
             </div>
           </motion.div>
@@ -167,9 +167,9 @@ const HomePage = () => {
                 AI Assisted Learning
               </h3>
 
-              <p className="text-slate-400 text-sm leading-relaxed">
-                Learn how to use AI tools in daily coding workflow for faster
-                and smarter development.
+              <p className="text-slate-400 text-base md:text-lg max-w-md leading-relaxed">
+                Students learn how to use AI tools in their daily coding
+                workflow for faster and smarter development.
               </p>
             </div>
           </motion.div>
@@ -188,34 +188,37 @@ const HomePage = () => {
                 Bring Your Laptop
               </h3>
 
-              <p className="text-slate-400 text-sm leading-relaxed">
-                Students write, test, and run code on their own system like a
-                real developer workspace.
+              <p className="text-slate-400 text-base md:text-lg max-w-md leading-relaxed">
+                Students write, test, and run code on their own systems just
+                like a real developer workspace.
               </p>
             </div>
           </motion.div>
 
           {/* Box 4 */}
           <motion.div
-            whileHover={{ y: -10 }}
-            className="md:col-span-8 relative bg-blue-600 p-8 md:p-12 rounded-[3.5rem] text-white overflow-hidden group shadow-[0_30px_60px_-15px_rgba(37,99,235,0.4)]"
+            whileHover={{ y: -8 }}
+            className="md:col-span-8 relative bg-blue-600 p-8 md:p-12 rounded-[3rem] text-white overflow-hidden group shadow-[0_30px_60px_-15px_rgba(37,99,235,0.4)]"
           >
-            <div className="absolute -right-10 top-1/2 -translate-y-1/2 text-[120px] md:text-[180px] font-black opacity-10 tracking-tighter select-none pointer-events-none group-hover:translate-x-6 transition-transform duration-700">
+            {/* Background Text */}
+            <div className="absolute -right-6 top-1/2 -translate-y-1/2 text-[100px] md:text-[160px] font-black opacity-10 tracking-tight select-none pointer-events-none transition-transform duration-700 group-hover:translate-x-4">
               Nadilix
             </div>
 
-            <div className="relative z-10 space-y-6">
+            {/* Content */}
+            <div className="relative z-10 space-y-2">
               <div className="p-4 bg-white/20 w-fit rounded-xl">
                 <Workflow size={30} />
               </div>
 
-              <h3 className="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight">
+              <h3 className="text-3xl md:text-5xl font-bold leading-[1.1] tracking-tight">
                 Real Workflow
               </h3>
 
-              <p className="text-blue-100 text-sm md:text-lg max-w-sm leading-relaxed">
-                Students observe how a project moves from start to finish during
-                live sessions and understand real development flow.
+              <p className="text-blue-100 text-base md:text-lg max-w-lg leading-relaxed">
+                Students observe how a project moves from planning to deployment
+                during live sessions and understand the complete development
+                process.
               </p>
             </div>
           </motion.div>
@@ -230,7 +233,7 @@ const HomePage = () => {
               Technology Stack
             </span>
 
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-white leading-tight">
               Daily Tools
             </h2>
           </div>
@@ -250,7 +253,7 @@ const HomePage = () => {
               Practice System
             </span>
 
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-white leading-tight">
               Daily Workflow
             </h2>
           </div>
