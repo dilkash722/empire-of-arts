@@ -113,7 +113,7 @@ export default function Navbar() {
               {/* Drawer Branding */}
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-white">
-                  Nadilix <span className="text-blue-500"></span>
+                  Nadil<span className="text-blue-500">ix</span>
                 </h2>
                 <p className="text-sm text-slate-400 mt-2">
                   Software Training & Development
