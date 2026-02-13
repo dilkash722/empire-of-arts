@@ -11,26 +11,18 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-14">
           {/* BRAND */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="lg:col-span-5 space-y-5">
-              <div className="group flex flex-col items-start leading-tight select-none">
-                <div className="relative flex items-end">
-                  <h2 className="text-2xl sm:text-3xl md:text-[34px] font-bold tracking-tight text-white leading-none">
-                    Nadil
-                    <span className="text-blue-600 font-black">ix</span>
+            <div className="group flex flex-col items-start leading-tight select-none">
+              <div className="flex flex-col items-start space-y-1 select-none">
+                <Link to="/" className="outline-none">
+                  <h2 className="text-[22px] sm:text-[24px] font-semibold tracking-tight text-white leading-none">
+                    Nadil<span className="text-blue-500">ix</span>
                   </h2>
+                </Link>
 
-                  <span className="mb-1 ml-1.5 h-2 w-2 rounded-full bg-blue-600 opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
-                </div>
-
-                <div className="mt-2 flex items-center gap-3">
-                  <div className="h-[1px] w-6 bg-slate-700 group-hover:w-9 group-hover:bg-blue-600 transition-all duration-300"></div>
-
-                  <p className="text-[10px] md:text-[11px] font-semibold text-slate-400 uppercase tracking-[0.25em] leading-none group-hover:text-slate-300 transition-colors duration-300">
-                    Build Skills
-                    <span className="mx-1 text-slate-600">/</span>
-                    Build Software
-                  </p>
-                </div>
+                <p className="mt-0.5 text-[11px] font-medium text-slate-400 tracking-wide">
+                  Build Skills <span className="mx-1 text-slate-600">|</span>{" "}
+                  Build Software
+                </p>
               </div>
             </div>
 

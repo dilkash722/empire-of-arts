@@ -42,30 +42,25 @@ export default function Navbar() {
             : "bg-transparent py-6"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8 lg:px-10 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 flex items-center justify-between">
           {/* BRAND */}
           <Link
             to="/"
             className="group flex flex-col items-start select-none outline-none"
           >
-            <div className="relative flex items-end">
-              <h1 className="text-2xl sm:text-3xl md:text-[36px] font-bold tracking-tight text-white leading-none">
-                Nadil
-                <span className="text-blue-600 font-black">ix</span>
-              </h1>
+            {/* Brand */}
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-white leading-tight">
+              Nadil
+              <span className="text-blue-500 transition-colors group-hover:text-blue-400">
+                ix
+              </span>
+            </h1>
 
-              <span className="mb-1 ml-1.5 h-2 w-2 rounded-full bg-blue-600 opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
-            </div>
-
-            <div className="mt-2 flex items-center gap-3">
-              <div className="h-[1px] w-6 bg-slate-700 group-hover:w-9 group-hover:bg-blue-600 transition-all duration-300"></div>
-
-              <p className="text-[10px] md:text-[11px] font-semibold text-slate-400 uppercase tracking-[0.25em] leading-none group-hover:text-slate-300 transition-colors duration-300">
-                Build Skills
-                <span className="mx-1 text-slate-600">/</span>
-                Build Software
-              </p>
-            </div>
+            {/* Tagline */}
+            <p className="text-[10px] sm:text-[11px] font-medium text-slate-400 tracking-[0.05em] opacity-80">
+              Build Skills <span className="mx-0.5 text-slate-600">|</span>{" "}
+              Build Software
+            </p>
           </Link>
           {/* DESKTOP NAV */}
           <nav className="hidden lg:flex items-center gap-2">
@@ -124,25 +119,17 @@ export default function Navbar() {
               </button>
 
               {/* Drawer Branding */}
-              <div className="group flex flex-col items-start mb-12 select-none">
-                <div className="relative flex items-end">
-                  <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white leading-none">
-                    Nadil
-                    <span className="text-blue-600 font-black">ix</span>
-                  </h2>
+              <div className="flex flex-col items-start mb-12 select-none">
+                {/* Brand */}
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white leading-tight">
+                  Nadil<span className="text-blue-500">ix</span>
+                </h2>
 
-                  <span className="mb-1 ml-1.5 h-2 w-2 rounded-full bg-blue-600 opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
-                </div>
-
-                <div className="mt-2 flex items-center gap-3">
-                  <div className="h-[1px] w-6 bg-slate-700 group-hover:w-9 group-hover:bg-blue-600 transition-all duration-300"></div>
-
-                  <p className="text-[10px] md:text-[11px] font-semibold text-slate-400 uppercase tracking-[0.25em] leading-none group-hover:text-slate-300 transition-colors duration-300">
-                    Build Skills
-                    <span className="mx-1 text-slate-600">/</span>
-                    Build Software
-                  </p>
-                </div>
+                {/* Tagline */}
+                <p className="mt-0.5 text-[11px] font-medium text-slate-400 tracking-wide">
+                  Build Skills <span className="mx-0.5 text-slate-600">|</span>{" "}
+                  Build Software
+                </p>
               </div>
 
               {/* Links */}
