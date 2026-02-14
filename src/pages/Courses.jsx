@@ -126,7 +126,7 @@ export default function Courses() {
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl  text-white leading-tight"
           >
             Our Learning Path
           </motion.h1>
@@ -169,7 +169,7 @@ export default function Courses() {
                 </div>
               </div>
 
-              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-3 group-hover:text-blue-500 transition-colors">
+              <h2 className="text-2xl md:text-3xl  tracking-tight mb-3 group-hover:text-blue-500 transition-colors">
                 {course.title}
               </h2>
 

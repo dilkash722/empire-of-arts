@@ -67,7 +67,7 @@ const HomePage = () => {
           {/* Small Tag */}
           <motion.p
             variants={itemVariants}
-            className="text-sm text-slate-400 font-medium tracking-wide"
+            className="text-sm text-slate-400 font-light tracking-wide"
           >
             Nadilix Software Training & Development | Katihar
           </motion.p>
@@ -75,7 +75,7 @@ const HomePage = () => {
           {/* Main Heading */}
           <motion.h1
             variants={itemVariants}
-            className="mt-6 text-[clamp(3rem,8vw,6rem)] font-bold leading-tight text-white"
+            className="mt-6 text-[clamp(3rem,8vw,6rem)] leading-tight text-white"
           >
             Learn to Build
             <span className="text-blue-500"> Real Software </span>
@@ -85,7 +85,7 @@ const HomePage = () => {
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="mt-8 text-slate-300 text-lg md:text-xl leading-snug max-w-3xl mx-auto font-light"
+            className="mt-8 max-w-3xl mx-auto text-slate-300 text-[17px] md:text-[19px] leading-relaxed font-normal"
           >
             Nadilix is a practical software training and development center
             where students code daily, build real projects, and businesses
@@ -122,11 +122,11 @@ const HomePage = () => {
       <section className="relative z-10 pt-8 pb-20 px-6 max-w-7xl mx-auto">
         {/* Heading */}
         <div className="space-y-4 mb-12">
-          <span className="text-blue-500 text-xs font-semibold uppercase">
+          <span className="text-blue-500 text-xs uppercase">
             Practical Learning
           </span>
 
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-white leading-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl tracking-tighter text-white leading-tight">
             Code Practice
           </h2>
         </div>
@@ -142,7 +142,7 @@ const HomePage = () => {
                 <MonitorPlay size={30} />
               </div>
 
-              <h3 className="text-2xl md:text-4xl font-bold text-white leading-snug tracking-tight">
+              <h3 className="text-2xl md:text-4xl  text-white leading-snug tracking-tight">
                 Live Coding
               </h3>
 
@@ -163,7 +163,7 @@ const HomePage = () => {
                 <BrainCircuit size={28} />
               </div>
 
-              <h3 className="text-xl md:text-2xl font-bold text-white leading-snug tracking-tight">
+              <h3 className="text-xl md:text-2xl  text-white leading-snug tracking-tight">
                 AI Assisted Learning
               </h3>
 
@@ -184,7 +184,7 @@ const HomePage = () => {
                 <Laptop size={28} />
               </div>
 
-              <h3 className="text-xl md:text-2xl font-bold text-white leading-snug tracking-tight">
+              <h3 className="text-xl md:text-2xl  text-white leading-snug tracking-tight">
                 Bring Your Laptop
               </h3>
 
@@ -211,7 +211,7 @@ const HomePage = () => {
                 <Workflow size={30} />
               </div>
 
-              <h3 className="text-3xl md:text-5xl font-bold leading-[1.1] tracking-tight">
+              <h3 className="text-3xl md:text-5xl  leading-[1.1] tracking-tight">
                 Real Workflow
               </h3>
 
@@ -229,11 +229,11 @@ const HomePage = () => {
         <div className="max-w-[77rem] mx-auto">
           {/* Heading */}
           <div className="space-y-4 mb-12">
-            <span className="text-blue-500 text-xs font-semibold tracking-wide uppercase">
+            <span className="text-blue-500 text-xs  tracking-wide uppercase">
               Technology Stack
             </span>
 
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-white leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl  tracking-tighter text-white leading-tight">
               Tech Stack
             </h2>
           </div>
@@ -249,11 +249,11 @@ const HomePage = () => {
       <section className="relative z-10 py-20 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
           <div className="space-y-4">
-            <span className="text-blue-500 text-xs font-semibold tracking-wide uppercase">
+            <span className="text-blue-500 text-xs  tracking-wide uppercase">
               Practice System
             </span>
 
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-white leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl  tracking-tighter text-white leading-tight">
               Daily Workflow
             </h2>
           </div>
@@ -323,10 +323,10 @@ const HomePage = () => {
                         Phase_{step.id}
                       </span>
                     </div>
-                    <h3 className="text-2xl font-black text-white tracking-tight">
+                    <h3 className="text-2xl text-white tracking-tight">
                       {step.title}
                     </h3>
-                    <p className="text-slate-400 text-sm leading-relaxed font-medium group-hover:text-slate-300 transition-colors">
+                    <p className="text-slate-400 text-sm leading-relaxed group-hover:text-slate-300 transition-colors">
                       {step.desc}
                     </p>
                   </div>
@@ -355,7 +355,7 @@ const HomePage = () => {
 
           {/* Content */}
           <div className="relative z-10">
-            <h2 className="text-3xl sm:text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-6">
+            <h2 className="text-3xl sm:text-5xl md:text-7xl  text-white tracking-tight leading-[1.1] mb-6">
               Visit Nadilix <br className="hidden sm:block" />
               Training Center
             </h2>
@@ -370,7 +370,7 @@ const HomePage = () => {
               href="YOUR_GOOGLE_MAP_LINK"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-black hover:text-white h-14 md:h-16 px-10 md:px-14 rounded-2xl font-bold text-sm md:text-lg uppercase tracking-[0.2em] transition-all shadow-xl"
+              className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-black hover:text-white h-14 md:h-16 px-10 md:px-14 rounded-2xl  text-sm md:text-lg uppercase tracking-[0.2em] transition-all shadow-xl"
             >
               Visit Now
               <ArrowRight size={18} className="ml-3" />

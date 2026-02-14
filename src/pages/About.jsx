@@ -42,7 +42,7 @@ const AboutPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.6 }}
-            className="text-xs sm:text-sm text-blue-500 font-semibold tracking-wide uppercase"
+            className="text-xs sm:text-sm text-blue-500  tracking-wide uppercase"
           >
             About Nadilix
           </motion.p>
@@ -52,10 +52,10 @@ const AboutPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-4xl sm:text-6xl md:text-7xl font-bold text-white leading-[1.15] tracking-tight"
+            className="text-4xl sm:text-6xl md:text-7xl  text-white leading-[1.15] tracking-tight"
           >
-            Learn
-            <span className="text-blue-500"> Real Software Development</span>
+            Learn Real Software
+            <span className="text-blue-500"> Development</span>
           </motion.h1>
 
           {/* Description */}
@@ -63,7 +63,7 @@ const AboutPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.6 }}
-            className="text-slate-400 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto font-normal"
+            className="text-slate-400 text-mono sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto font-normal"
           >
             We focus on practical learning where students write code daily,
             build projects step by step, and understand how real software
@@ -101,7 +101,7 @@ const AboutPage = () => {
             {/* RIGHT CONTENT */}
             <div className="p-8 md:p-10 space-y-6 flex flex-col justify-center">
               <div>
-                <h2 className="text-2xl md:text-3xl font-semibold text-white">
+                <h2 className="text-2xl md:text-3xl  text-white">
                   Md Dilkhush
                 </h2>
                 <p className="text-blue-500 text-sm mt-1">
@@ -139,7 +139,7 @@ const AboutPage = () => {
       </section>
       {/* --- PILLARS --- */}
       <section className="py-16 px-6 max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl md:text-6xl font-bold mb-16 tracking-tighter text-white">
+        <h2 className="text-4xl md:text-6xl  mb-16 tracking-tighter text-white">
           Nadilix Pillars
         </h2>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -174,7 +174,7 @@ const AboutPage = () => {
                 {item.icon}
               </div>
               <div>
-                <h5 className="text-lg font-bold text-white tracking-tight">
+                <h5 className="text-lg  text-white tracking-tight">
                   {item.title}
                 </h5>
                 <p className="text-xs text-slate-500 font-medium uppercase tracking-widest mt-1">

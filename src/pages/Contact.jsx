@@ -35,7 +35,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl  text-white leading-tight"
           >
             Contact Nadilix
           </motion.h1>
@@ -89,7 +89,7 @@ export default function ContactPage() {
                     {card.label.replace("_", " ")}
                   </p>
 
-                  <h3 className="text-lg md:text-xl font-semibold text-white mb-1">
+                  <h3 className="text-lg md:text-xl  text-white mb-1">
                     {card.value}
                   </h3>
 
@@ -118,7 +118,7 @@ export default function ContactPage() {
               <span className="text-sm text-blue-500 font-medium">
                 Contact Form
               </span>
-              <h3 className="text-2xl md:text-3xl font-semibold text-white">
+              <h3 className="text-2xl md:text-3xl  text-white">
                 Send Your Details
               </h3>
             </div>

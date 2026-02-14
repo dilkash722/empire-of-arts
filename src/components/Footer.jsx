@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="group flex flex-col items-start leading-tight select-none">
               <div className="flex flex-col items-start space-y-1 select-none">
                 <Link to="/" className="outline-none">
-                  <h2 className="text-[22px] sm:text-[24px] font-semibold tracking-tight text-white leading-none">
+                  <h2 className="text-[22px] sm:text-[24px]  tracking-tight text-white leading-none">
                     Nadil<span className="text-blue-500 italic ">ix</span>
                   </h2>
                 </Link>
@@ -46,9 +46,7 @@ export default function Footer() {
 
           {/* COURSES */}
           <div className="lg:col-span-3">
-            <h3 className="text-sm font-semibold text-white mb-5 tracking-wide">
-              Courses
-            </h3>
+            <h3 className="text-sm  text-white mb-5 tracking-wide">Courses</h3>
             <ul className="space-y-3 text-sm">
               {[
                 "Full Stack Development",
@@ -70,9 +68,7 @@ export default function Footer() {
 
           {/* CONTACT */}
           <div className="lg:col-span-4">
-            <h3 className="text-sm font-semibold text-white mb-5 tracking-wide">
-              Contact
-            </h3>
+            <h3 className="text-sm  text-white mb-5 tracking-wide">Contact</h3>
 
             <div className="space-y-4 text-sm">
               <div className="flex items-center gap-3 text-slate-400">

@@ -48,30 +48,30 @@ export default function Navbar() {
             to="/"
             className="group flex flex-col items-start select-none outline-none"
           >
-            {/* Brand */}
-            <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-white leading-tight">
+            <h1 className="text-[24px] sm:text-[32px] tracking-[-0.02em] leading-none text-white">
               Nadil
-              <span className="text-blue-500 transition-colors italic group-hover:text-blue-400">
+              <span className="text-blue-500 italic tracking-normal transition-colors group-hover:text-blue-400">
                 ix
               </span>
             </h1>
 
-            {/* Tagline */}
-            <p className="text-[10px] sm:text-[11px] font-medium text-slate-400 tracking-[0.05em] opacity-80">
-              Build Skills <span className="mx-0.5 text-slate-600">|</span>{" "}
-              Build Software
+            <p className="mt-1 text-[11px] sm:text-xs text-slate-400 tracking-[0.12em]">
+              Build Skills <span className="mx-1 text-slate-600">|</span> Build
+              Software
             </p>
           </Link>
+
           {/* DESKTOP NAV */}
           <nav className="hidden lg:flex items-center gap-2">
             {links.map((link) => {
               const Icon = link.icon;
               const active = pathname === link.path;
+
               return (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition ${
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg text-[15px] font-medium tracking-[0.01em] transition ${
                     active ? "text-white" : "text-slate-400 hover:text-white"
                   }`}
                 >
@@ -82,7 +82,7 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* TOGGLE */}
+          {/* MOBILE TOGGLE */}
           <button
             onClick={() => setOpen(true)}
             className="lg:hidden p-2.5 bg-white/5 border border-white/10 rounded-lg text-white"
@@ -120,14 +120,12 @@ export default function Navbar() {
 
               {/* Drawer Branding */}
               <div className="flex flex-col items-start mb-12 select-none">
-                {/* Brand */}
-                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white leading-tight">
-                  Nadil<span className="text-blue-500">ix</span>
+                <h2 className="text-[28px]  tracking-[-0.02em] leading-none text-white">
+                  Nadil<span className="text-blue-500 italic">ix</span>
                 </h2>
 
-                {/* Tagline */}
-                <p className="mt-0.5 text-[11px] font-medium text-slate-400 tracking-wide">
-                  Build Skills <span className="mx-0.5 text-slate-600">|</span>{" "}
+                <p className="mt-1 text-[11px] font-medium text-slate-400 tracking-[0.12em]">
+                  Build Skills <span className="mx-1 text-slate-600">|</span>{" "}
                   Build Software
                 </p>
               </div>
@@ -156,7 +154,7 @@ export default function Navbar() {
                       >
                         <div className="flex items-center gap-3">
                           <Icon size={18} />
-                          <span className="text-base font-medium">
+                          <span className="text-[16px] font-medium tracking-[0.01em]">
                             {link.name}
                           </span>
                         </div>
