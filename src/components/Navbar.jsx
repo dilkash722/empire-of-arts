@@ -49,9 +49,9 @@ export default function Navbar() {
             className="group flex flex-col items-start select-none outline-none"
           >
             {/* Brand */}
-            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-white leading-tight">
+            <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-white leading-tight">
               Nadil
-              <span className="text-blue-500 transition-colors group-hover:text-blue-400">
+              <span className="text-blue-500 transition-colors italic group-hover:text-blue-400">
                 ix
               </span>
             </h1>

@@ -15,7 +15,7 @@ export default function Footer() {
               <div className="flex flex-col items-start space-y-1 select-none">
                 <Link to="/" className="outline-none">
                   <h2 className="text-[22px] sm:text-[24px] font-semibold tracking-tight text-white leading-none">
-                    Nadil<span className="text-blue-500">ix</span>
+                    Nadil<span className="text-blue-500 italic ">ix</span>
                   </h2>
                 </Link>
 
