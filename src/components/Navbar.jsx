@@ -9,6 +9,7 @@ import {
   BookOpen,
   Globe,
   ChevronRight,
+  Shield,
 } from "lucide-react";
 
 const links = [
@@ -61,27 +62,36 @@ export default function Navbar() {
             </p>
           </Link>
 
-          {/* DESKTOP NAV */}
-          <nav className="hidden lg:flex items-center gap-2">
-            {links.map((link) => {
-              const Icon = link.icon;
-              const active = pathname === link.path;
+          {/* DESKTOP NAV + ADMIN */}
+          <div className="hidden md:flex items-center justify-end flex-1 gap-6">
+            <nav className="flex items-center gap-2">
+              {links.map((link) => {
+                const Icon = link.icon;
+                const active = pathname === link.path;
 
-              return (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg text-[15px] font-medium tracking-[0.01em] transition ${
-                    active ? "text-white" : "text-slate-400 hover:text-white"
-                  }`}
-                >
-                  <Icon size={16} />
-                  {link.name}
-                </Link>
-              );
-            })}
-          </nav>
+                return (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-lg text-[15px] font-medium transition ${
+                      active ? "text-white" : "text-slate-400 hover:text-white"
+                    }`}
+                  >
+                    <Icon size={16} />
+                    {link.name}
+                  </Link>
+                );
+              })}
+            </nav>
 
+            <Link
+              to="/admin"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium transition"
+            >
+              <Shield size={16} />
+              Admin
+            </Link>
+          </div>
           {/* MOBILE TOGGLE */}
           <button
             onClick={() => setOpen(true)}
@@ -120,7 +130,7 @@ export default function Navbar() {
 
               {/* Drawer Branding */}
               <div className="flex flex-col items-start mb-12 select-none">
-                <h2 className="text-[28px]  tracking-[-0.02em] leading-none text-white">
+                <h2 className="text-[28px] tracking-[-0.02em] leading-none text-white">
                   Nadil<span className="text-blue-500 italic">ix</span>
                 </h2>
 
@@ -163,6 +173,18 @@ export default function Navbar() {
                     </motion.div>
                   );
                 })}
+              </div>
+
+              {/* Admin Button Mobile */}
+              <div className="mt-8">
+                <Link
+                  to="/admin"
+                  onClick={() => setOpen(false)}
+                  className="flex items-center justify-center gap-2 p-4 rounded-xl border border-blue-500 text-blue-400 hover:bg-blue-600 hover:text-white transition font-medium"
+                >
+                  <Shield size={18} />
+                  Admin
+                </Link>
               </div>
             </motion.div>
           </>
