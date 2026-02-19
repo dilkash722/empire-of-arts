@@ -11,17 +11,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-14">
           {/* BRAND */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="group flex flex-col items-start leading-tight select-none">
-              <div className="flex flex-col items-start space-y-1 select-none">
+            <div className="lg:col-span-5 space-y-4">
+              <div className="flex flex-col items-start leading-tight select-none">
                 <Link to="/" className="outline-none">
-                  <h2 className="text-[22px] sm:text-[24px]  tracking-tight text-white leading-none">
-                    Nadil<span className="text-blue-500 italic ">ix</span>
+                  <h2 className="text-[20px] sm:text-[22px] font-semibold tracking-[-0.02em] text-white leading-none">
+                    Nadilix
+                    <span className="ml-2 text-blue-500">CodeCraft</span>
                   </h2>
                 </Link>
 
-                <p className="mt-0.5 text-[11px] font-medium text-slate-400 tracking-wide">
-                  Build Skills <span className="mx-1 text-slate-600">|</span>{" "}
-                  Build Software
+                <p className="mt-1 text-[11px] text-slate-400 tracking-[0.14em] uppercase">
+                  Build Skill
+                  <span className="mx-2 text-slate-600">|</span>
+                  Build Career
                 </p>
               </div>
             </div>

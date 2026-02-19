@@ -39,7 +39,7 @@ export default function Navbar() {
       <header
         className={`fixed top-0 w-full z-[100] transition-all duration-500 ${
           scrolled
-            ? "bg-[#02040a]/80 backdrop-blur-xl border-b border-white/5 py-4"
+            ? "bg-[#02040a]/90 backdrop-blur-xl border-b border-white/5 py-4"
             : "bg-transparent py-6"
         }`}
       >
@@ -49,19 +49,19 @@ export default function Navbar() {
             to="/"
             className="group flex flex-col items-start select-none outline-none"
           >
-            <h1 className="text-[24px] sm:text-[32px] tracking-[-0.02em] leading-none text-white">
-              Nadil
-              <span className="text-blue-500 italic tracking-normal transition-colors group-hover:text-blue-400">
-                ix
+            <h1 className="text-[20px] sm:text-[24px] font-semibold tracking-[-0.02em] leading-none text-white">
+              Nadilix
+              <span className="ml-2 text-blue-500 transition-colors duration-300 group-hover:text-blue-400">
+                CodeCraft
               </span>
             </h1>
 
-            <p className="mt-1 text-[11px] sm:text-xs text-slate-400 tracking-[0.12em]">
-              Build Skills <span className="mx-1 text-slate-600">|</span> Build
-              Software
+            <p className="mt-1 text-[10px] sm:text-[11px] text-slate-400 tracking-[0.14em] uppercase">
+              Build Skill
+              <span className="mx-2 text-slate-600">|</span>
+              Build Career
             </p>
           </Link>
-
           {/* DESKTOP NAV + ADMIN */}
           <div className="hidden md:flex items-center justify-end flex-1 gap-6">
             <nav className="flex items-center gap-2">
@@ -130,13 +130,17 @@ export default function Navbar() {
 
               {/* Drawer Branding */}
               <div className="flex flex-col items-start mb-12 select-none">
-                <h2 className="text-[28px] tracking-[-0.02em] leading-none text-white">
-                  Nadil<span className="text-blue-500 italic">ix</span>
+                <h2 className="text-[22px] font-semibold tracking-[-0.02em] leading-none text-white">
+                  Nadilix
+                  <span className="ml-2 text-blue-500 transition-colors duration-300">
+                    CodeCraft
+                  </span>
                 </h2>
 
-                <p className="mt-1 text-[11px] font-medium text-slate-400 tracking-[0.12em]">
-                  Build Skills <span className="mx-1 text-slate-600">|</span>{" "}
-                  Build Software
+                <p className="mt-1 text-[11px] text-slate-400 tracking-[0.14em] uppercase">
+                  Build Skill
+                  <span className="mx-2 text-slate-600">|</span>
+                  Build Career
                 </p>
               </div>
 

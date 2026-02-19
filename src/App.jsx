@@ -18,7 +18,7 @@ export default function App() {
       <Navbar />
 
       {/* Main Content Wrapper */}
-      <div className="pt-28 min-h-screen bg-[#0a0c12]">
+      <div className="pt-[60px] min-h-screen bg-[#02040a]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
