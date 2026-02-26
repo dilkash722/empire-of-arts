@@ -105,7 +105,7 @@ const AboutPage = () => {
                   Md Dilkhush
                 </h2>
                 <p className="text-blue-500 text-sm mt-1">
-                  Founder & Lead Mentor, Nadilix CodeCraft
+                  Founder & Lead Mentor, Nadilix
                 </p>
               </div>
 

@@ -31,7 +31,10 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "unset";
+    document.body.style.overflow = open ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [open]);
 
   return (
@@ -39,31 +42,40 @@ export default function Navbar() {
       <header
         className={`fixed top-0 w-full z-[100] transition-all duration-500 ${
           scrolled
-            ? "bg-[#02040a]/90 backdrop-blur-xl border-b border-white/5 py-4"
-            : "bg-transparent py-6"
+            ? "bg-[#02040a]/90 backdrop-blur-xl border-b border-white/5 py-3 lg:py-4"
+            : "bg-transparent py-4 lg:py-6"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 flex items-center justify-between">
-          {/* BRAND */}
+          {/* Branding */}
           <Link
             to="/"
-            className="group flex flex-col items-start select-none outline-none"
+            className="group flex flex-col items-start select-none outline-none shrink-0"
           >
-            <h1 className="text-[20px] sm:text-[24px] font-semibold tracking-[-0.02em] leading-none text-white">
-              Nadilix
-              <span className="ml-2 text-blue-500 transition-colors duration-300 group-hover:text-blue-400">
-                CodeCraft
-              </span>
-            </h1>
+            <div className="flex items-center gap-3 sm:gap-5">
+              <h1 className="text-2xl sm:text-[30px] lg:text-[36px] font-semibold tracking-[-0.05em] text-white transition-all duration-500 group-hover:tracking-[-0.02em]">
+                Nadilix
+              </h1>
 
-            <p className="mt-1 text-[10px] sm:text-[11px] text-slate-400 tracking-[0.14em] uppercase">
-              Build Skill
-              <span className="mx-2 text-slate-600">|</span>
-              Build Career
-            </p>
+              <div className="h-8 sm:h-9 w-[1px] bg-gradient-to-b from-transparent via-slate-700 to-transparent rotate-[15deg]" />
+
+              <div className="flex flex-col justify-center">
+                <span className="text-[9px] sm:text-[11px] font-bold tracking-[0.25em] text-blue-500 uppercase leading-tight">
+                  Full Stack
+                </span>
+                <span className="text-[9px] sm:text-[11px] font-medium tracking-[0.25em] text-slate-400 uppercase leading-tight group-hover:text-emerald-400 transition-colors duration-300">
+                  Data Analytics
+                </span>
+              </div>
+            </div>
+
+            <div className="relative mt-2 h-[1px] w-full max-w-[160px] bg-slate-800">
+              <div className="absolute top-0 left-0 h-full w-0 bg-blue-500 group-hover:w-full transition-all duration-700 ease-out" />
+            </div>
           </Link>
-          {/* DESKTOP NAV + ADMIN */}
-          <div className="hidden md:flex items-center justify-end flex-1 gap-6">
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-6">
             <nav className="flex items-center gap-2">
               {links.map((link) => {
                 const Icon = link.icon;
@@ -92,7 +104,8 @@ export default function Navbar() {
               Admin
             </Link>
           </div>
-          {/* MOBILE TOGGLE */}
+
+          {/* Mobile Toggle */}
           <button
             onClick={() => setOpen(true)}
             className="lg:hidden p-2.5 bg-white/5 border border-white/10 rounded-lg text-white"
@@ -102,7 +115,7 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* MOBILE DRAWER */}
+      {/* Mobile Drawer */}
       <AnimatePresence>
         {open && (
           <>
@@ -118,7 +131,7 @@ export default function Navbar() {
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ duration: 0.45 }}
+              transition={{ duration: 0.4 }}
               className="fixed top-0 right-0 h-full w-full max-w-sm bg-[#0a0c12] z-[150] px-8 pt-20 pb-10 flex flex-col"
             >
               <button
@@ -128,23 +141,28 @@ export default function Navbar() {
                 <X size={22} />
               </button>
 
-              {/* Drawer Branding */}
               <div className="flex flex-col items-start mb-12 select-none">
-                <h2 className="text-[22px] font-semibold tracking-[-0.02em] leading-none text-white">
-                  Nadilix
-                  <span className="ml-2 text-blue-500 transition-colors duration-300">
-                    CodeCraft
-                  </span>
-                </h2>
+                <div className="flex items-center gap-3">
+                  <h2 className="text-2xl font-extrabold tracking-[-0.05em] text-white">
+                    Nadilix
+                  </h2>
 
-                <p className="mt-1 text-[11px] text-slate-400 tracking-[0.14em] uppercase">
-                  Build Skill
-                  <span className="mx-2 text-slate-600">|</span>
-                  Build Career
-                </p>
+                  <div className="h-7 w-[1px] bg-gradient-to-b from-transparent via-slate-700 to-transparent rotate-[15deg]" />
+
+                  <div className="flex flex-col justify-center">
+                    <span className="text-[9px] font-bold tracking-[0.25em] text-blue-500 uppercase leading-tight">
+                      Full Stack
+                    </span>
+                    <span className="text-[9px] font-medium tracking-[0.25em] text-slate-400 uppercase leading-tight">
+                      Data Analytics
+                    </span>
+                  </div>
+                </div>
+
+                <div className="relative mt-2 h-[1px] w-full max-w-[150px] bg-slate-800">
+                  <div className="absolute top-0 left-0 h-full w-12 bg-blue-500" />
+                </div>
               </div>
-
-              {/* Links */}
               <div className="space-y-4">
                 {links.map((link, i) => {
                   const Icon = link.icon;
@@ -168,7 +186,7 @@ export default function Navbar() {
                       >
                         <div className="flex items-center gap-3">
                           <Icon size={18} />
-                          <span className="text-[16px] font-medium tracking-[0.01em]">
+                          <span className="text-[16px] font-medium">
                             {link.name}
                           </span>
                         </div>
@@ -179,7 +197,6 @@ export default function Navbar() {
                 })}
               </div>
 
-              {/* Admin Button Mobile */}
               <div className="mt-8">
                 <Link
                   to="/admin"

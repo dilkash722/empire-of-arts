@@ -69,7 +69,7 @@ const HomePage = () => {
             variants={itemVariants}
             className="text-sm text-slate-400 font-light tracking-wide"
           >
-            Nadilix CodeCraft | Katihar
+            Nadilix Software Training | Katihar
           </motion.p>
 
           {/* Main Heading */}
@@ -87,8 +87,8 @@ const HomePage = () => {
             variants={itemVariants}
             className="mt-8 max-w-3xl mx-auto text-slate-300 text-[17px] md:text-[19px] leading-relaxed font-normal"
           >
-            Nadilix CodeCraft is a practical coding and data training center
-            where students build real software projects and gain real-world
+            Nadilix is a practical coding and data training center where
+            students build real software projects and gain real-world
             development experience.
           </motion.p>
 

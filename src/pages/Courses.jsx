@@ -5,7 +5,7 @@ import {
   Code2,
   BrainCircuit,
   ArrowRight,
-  Layers,
+  Code,
   Zap,
   Cpu,
 } from "lucide-react";
@@ -13,18 +13,18 @@ import { motion } from "framer-motion";
 
 const courses = [
   {
-    title: "Web Designing With AI",
-    subtitle: "Design Smart User Interfaces",
-    desc: "Learn modern UI UX design with AI tools and create responsive layouts for real websites step by step.",
-    stack: ["HTML5", "CSS3", "JavaScript", "AI Prompting"],
+    title: "Programming With AI",
+    subtitle: "Core Languages for Real Development",
+    desc: "Learn industry level programming languages with AI assisted guidance and build real world applications step by step.",
+    stack: ["Python", "JavaScript", "Java", "C", "C++", "MySQL", "MongoDB"],
     points: [
-      "AI assisted UI UX design",
-      "Responsive layout design",
-      "Design systems and typography",
+      "Strong programming fundamentals",
+      "Backend and database integration",
+      "Project based learning approach",
     ],
-    icon: <Layers size={40} className="text-cyan-500" />,
-    border: "group-hover:border-cyan-500/50",
-    bgGlow: "bg-cyan-500/5",
+    icon: <Code size={40} className="text-indigo-500" />,
+    border: "group-hover:border-indigo-500/50",
+    bgGlow: "bg-indigo-500/5",
   },
   {
     title: "Frontend Development",
@@ -38,6 +38,7 @@ const courses = [
       "React",
       "Vite",
       "Git",
+      "GitHub",
       "AI Coding",
     ],
     points: [
@@ -60,6 +61,8 @@ const courses = [
       "Node.js",
       "Next.js",
       "Tailwind",
+      "Git",
+      "GitHub",
       "AI Coding",
     ],
     points: [
@@ -79,9 +82,12 @@ const courses = [
       "Python Core",
       "Pandas",
       "NumPy",
+      "Statistics",
+      "Seaborn",
       "MySQL",
       "Matplotlib",
       "Plotly",
+      "Excel",
       "AI Coding",
     ],
     points: [
